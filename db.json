@@ -1,0 +1,41 @@
+{
+  "usuario": 
+    {
+      "nombre": "Esteban Gabriel Jesus",
+      "apellido": "Perea",
+      "edad": 42
+    }
+  ,
+  "education": [{
+    "school": "UTN",
+    "title": "Ingeniería",
+    "img": "https://www.ort.edu.ar/img/LogoOrtArgWeb2017.jpg",
+    "career": "Ingeniería en Sistemas de Información",
+    "score": 0,
+    "start": "2019",
+    "end": "2023"
+  },
+  {
+    "school": "Centro de Enseñanza Técnica Industrial",
+    "title": "Tecnologo",
+    "img": "https://media-exp1.licdn.com/dms/image/C560BAQEUHhax7RCj0A/company-logo_100_100/0/1584819716706?e=1637798400&v=beta&t=4UkXYz39PCtn4PqDYbwXZNWPSC3MgoHckfDfqQLBlHc",
+    "career": "Desarrollo de Software",
+    "score": 82,
+    "start": "2014",
+    "end": "2018"
+  },
+  {
+    "school": "Escuela Secundaria Técnica 14",
+    "title": "Técnico",
+    "img": "https://media-exp1.licdn.com/dms/image/C4E0BAQFhOoraRhsOSQ/company-logo_100_100/0/1590421269154?e=1637798400&v=beta&t=gyinTA0GPG1xIBDPj01L33mQHcdOdyMOdpoRHY640Pc",
+    "career": "Electronica, comunicacion y sistemas de control",
+    "score": 0,
+    "start": "2012",
+    "end": "2014"
+  }
+  ],
+
+  "profile": {
+    "name": "typicode"
+  }
+}
