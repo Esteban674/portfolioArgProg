@@ -1,9 +1,9 @@
 {
   "usuario": 
     {
-      "nombre": "Esteban Gabriel Jesus",
-      "apellido": "Perea",
-      "edad": 42
+      "name": "Esteban Gabriel Jesus",
+      "lastName": "Perea",
+      "age": 42
     }
   ,
   "education": [{

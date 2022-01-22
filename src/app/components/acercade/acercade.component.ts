@@ -9,7 +9,7 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class AcercadeComponent implements OnInit {
 
-  usuario: Usuario = {nombre:"",apellido:"",edad:0};
+  usuario= <Usuario>{};
 
   constructor(private portfolioService: PortfolioService) { }
 
