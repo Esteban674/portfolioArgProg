@@ -2,9 +2,36 @@
   <div class="card-group">
     <h2>Experiencia</h2>
     <ul>
-        <li>Experiencia 1</li>
-        <li>Experiencia 2</li>
-        <li>Experiencia 3</li>
-    </ul>
+        <li *ngFor="let experience of experiences">
+          <div>
+            <h3>{{experience.position}}</h3>
+            <span>Modalidad: {{experience.mode}}</span><br>
+            <span>Empresa: {{experience.company}}</span><br>
+            <span>Ubicación: {{experience.location}}</span><br>
+            <span><time>{{experience.startMonth}}</time></span>
+            <span><time> {{experience.startYear}}</time></span>
+            <span> - </span>
+            <span *ngIf="experience.endMonth !== ''"><time>{{experience.endMonth}}</time></span>
+            <span *ngIf="experience.endMonth !== ''"><time> {{experience.endYear}}</time></span>
+            <span *ngIf="experience.endMonth === ''"><time>hasta la </time></span>
+            <span *ngIf="experience.endMonth === ''"><time>fecha</time></span>
+            <br>
+            <span>Tiempo transcurrido: {{experience.timeElapsed}}</span><br>
+            <span>Comentarios: {{experience.comments}}</span>
+          </div>
+        </li>
+    </ul>  
   </div>
 </div>
+
+
+<!-- position:string;        //Cargo
+mode:string;            //Tipo de empleo Ej: Jornada Completa
+company:string;         //Nombre de la empresa
+location:string;        //Direccion Ej: Pilar, Cordoba, Argentina 
+startMonth: string; 
+startYear:number;   
+endMonth?:string;       //Cuando esten vacias reemplazar por la palabra "Actualidad"
+endYear?:number;
+timeElapsed: string; 
+comments:string;   -->

@@ -6,3 +6,11 @@
     border: 1px solid #ccc;
  
 }
+
+ul{
+    list-style-type: none;
+ }
+ 
+ li{
+     margin:10px 15px 15px 150px;
+ }

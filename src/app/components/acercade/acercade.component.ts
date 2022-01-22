@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from 'src/app/interfaces/interfaces';
 import { PortfolioService } from 'src/app/services/portfolio.service';
+import { User } from '../../interfaces/interfaces';
 
 @Component({
   selector: 'app-acercade',
@@ -9,12 +9,12 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class AcercadeComponent implements OnInit {
 
-  usuario= <Usuario>{};
+  user= <User>{};
 
   constructor(private portfolioService: PortfolioService) { }
 
   ngOnInit(): void {
-    this.portfolioService.getUsuario().subscribe(data => {this.usuario = data;});
+    this.portfolioService.getUser().subscribe(data => {this.user = data;});
   }
 
 }

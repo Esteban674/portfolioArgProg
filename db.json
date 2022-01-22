@@ -1,5 +1,5 @@
 {
-  "usuario": 
+  "user": 
     {
       "name": "Esteban Gabriel Jesus",
       "lastName": "Perea",
@@ -12,7 +12,7 @@
       "img?":""
     }
   ,
-  "experiencia":[{
+  "experience":[{
     "position": "Encargado de planificacion de producción" ,      
     "mode": "Jornada Completa" ,           
     "company": "Oscar Scroza Equipos y Servicios Srl" ,       
@@ -37,7 +37,7 @@
     "comments":"En los primeros dos años se implementó un sistema de gestión de producción de terceros (Capataz). A partir de marzo de 2017 se comenzó un proyecto de Software ERP para la producción en formato de aplicacion de escritorio (Windows Forms), programado en lenguaje C# bajo Visual Studio y utilizando SQL Server para las bases de datos"
   },
   {
-    "position": "Administativo de producción" ,      
+    "position": "Administrativo de producción" ,      
     "mode": "Jornada Completa" ,           
     "company": "Georgalos SAICA" ,       
     "location": "Río Segundo, Cordoba, Argentina" ,
@@ -67,13 +67,13 @@
     "location": "Costa Sacate, Cordoba, Argentina" ,
     "startMonth": "Nov" , 
     "startYear": "1999" ,   
-    "endMonth": "jul",       
+    "endMonth": "Jul",       
     "endYear": "2009" ,
     "timeElapsed": "9 años y 8 meses" ,
     "comments": "Ademas de las tareas propias de control, seguimiento y gestión de la producción, estuve a cargo del área de Sistemas de la empresa y de la implementacion de un software ERP Capataz"
   },
   {
-    "position": "Administativo de producción - Ayudante en Sistemas" ,      
+    "position": "Administrativo de producción - Ayudante en Sistemas" ,      
     "mode": "Jornada Completa" ,           
     "company": "Orintrama Srl" ,       
     "location": "Costa Sacate, Cordoba, Argentina" ,
@@ -86,7 +86,7 @@
   }
  ]
   ,
-  "educacion": [{
+  "education": [{
     "school": "Instituto Superior Pascal" ,
     "title": "Técnico Superior en Desarrollo de Software" ,
     "career": "Desarrollo de Software" ,
@@ -131,7 +131,7 @@
     "img?": "https://www.unc.edu.ar/sites/all/themes/unc/images/footer.svg"
   }
   ],
-  "cursosCertificados":[{
+  "coursesCertified":[{
     "name": "Argentina Programa - #Yo Programo" ,                
     "issuingAuthority": "Ministerio de Desarrollo Productivo - Cámara de la Industria Argentina del Software (CESSI) - Instituto Nacional de Tecnología Industrial (INTI)" ,  
     "expeditionMonth": "May" ,
@@ -211,5 +211,147 @@
     "comments": "" ,
     "img?": "" 
   }
-  ]
+  ],
+  "hardSkills": [{
+    "name":"HTML" ,
+    "frontEnd": true ,
+    "backEnd": false ,
+    "level": "Intermedio" ,           
+    "comments": "" ,
+    "img?": ""
+  },
+  {
+    "name":"CSS" ,
+    "frontEnd": true ,
+    "backEnd": false ,
+    "level": "Intermedio" ,           
+    "comments": "" ,
+    "img?": ""
+  },
+  {
+    "name":"JavaScript" ,
+    "frontEnd": true ,
+    "backEnd": true ,
+    "level": "Intermedio" ,           
+    "comments": "" ,
+    "img?": ""
+  },
+  {
+    "name":"TypeScrpit" ,
+    "frontEnd": true ,
+    "backEnd": false ,
+    "level": "Intermedio" ,           
+    "comments": "" ,
+    "img?": ""
+  },
+  {
+    "name":"Bootstrap" ,
+    "frontEnd": true ,
+    "backEnd": false ,
+    "level": "Intermedio" ,           
+    "comments": "" ,
+    "img?": ""
+  },
+  {
+    "name":"Angular" ,
+    "frontEnd": true ,
+    "backEnd": false ,
+    "level": "Intermedio" ,           
+    "comments": "" ,
+    "img?": ""
+  },
+  {
+    "name":"Java" ,
+    "frontEnd": false ,
+    "backEnd": true ,
+    "level": "Intermedio" ,           
+    "comments": "" ,
+    "img?": ""
+  },
+  {
+    "name":"C#" ,
+    "frontEnd": false ,
+    "backEnd": true ,
+    "level": "Intermedio" ,           
+    "comments": "" ,
+    "img?": ""
+  },
+  {
+    "name":"Ruby" ,
+    "frontEnd": false ,
+    "backEnd": true ,
+    "level": "Principiante" ,           
+    "comments": "" ,
+    "img?": ""
+  },
+  {
+    "name":"C++" ,
+    "frontEnd": false ,
+    "backEnd": true ,
+    "level": "Principiante" ,           
+    "comments": "" ,
+    "img?": ""
+  },
+  {
+    "name":"SQL" ,
+    "frontEnd": false ,
+    "backEnd": true ,
+    "level": "Intermedio" ,           
+    "comments": "" ,
+    "img?": ""
+  },
+  {
+    "name":"MySQL" ,
+    "frontEnd": false ,
+    "backEnd": true ,
+    "level": "Principiante" ,           
+    "comments": "" ,
+    "img?": ""
+  },
+  {
+    "name":"Inglés" ,
+    "frontEnd": false ,
+    "backEnd": false ,
+    "level": "Intermedio" ,           
+    "comments": "" ,
+    "img?": ""
+  },
+  {
+    "name":"Git" ,
+    "frontEnd": false ,
+    "backEnd": false ,
+    "level": "Principiante" ,           
+    "comments": "" ,
+    "img?": ""
+  },
+  {
+    "name":"Github" ,
+    "frontEnd": false ,
+    "backEnd": false ,
+    "level": "Principiante" ,           
+    "comments": "" ,
+    "img?": ""
+  }
+  ],
+  "softSkills": [{
+    "name":"SCRUM" ,
+    "level": "Bueno" ,           
+    "comments": "Principiante"
+  },
+  {
+    "name":"Trabajo en equipo" ,
+    "level": "Muy Bueno" ,           
+    "comments": ""
+  },
+  {
+    "name":"Iniciativa" ,
+    "level": "Muy Bueno" ,            
+    "comments": ""
+  },
+  {
+    "name":"Comunicación" ,
+    "level": "Bueno" ,           
+    "comments": ""
+  }
+]
 }

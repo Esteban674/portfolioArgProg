@@ -1,4 +1,4 @@
-export interface Usuario {
+export interface User {
     name:string;
     lastName:string;
     email:string;
@@ -10,7 +10,7 @@ export interface Usuario {
     img?:string;
 }
 
-export interface Experiencia{
+export interface Experience{
     position:string;        //Cargo
     mode:string;            //Tipo de empleo Ej: Jornada Completa
     company:string;         //Nombre de la empresa
@@ -23,7 +23,7 @@ export interface Experiencia{
     comments:string;  
 }
 
-export interface Educacion{
+export interface Education{
     school:string;      //Institucion
     title:string;       //Titulo
     career:string;      //Disciplina Academica
@@ -35,7 +35,7 @@ export interface Educacion{
     img?:string;
 }
 
-export interface CursosCertificados{
+export interface CoursesCertified{
     name:string;                //Nombre del curso o certificacion
     issuingAuthority:string;    //Empresa o autoridad emisora
     expeditionMonth:string;
@@ -46,9 +46,26 @@ export interface CursosCertificados{
     img?:string;
 }
 
-export interface Habilidades{
-    name:string;
-    progress:string;
+
+
+export interface HardSkills{
+    name:string;                //HTML, CSS, JavaScript, Idiomas
+    frontEnd: boolean;
+    backEnd: boolean;
+    level:string;               //Principiante, Intermedio, Competente, Experto
+    comments:string;
     img?:string;
 }
 
+
+export interface SoftSkills{
+    name:string;                //SCRUM, Administracion del tiempo, trabajo en equipo, comunicacion, iniciativa
+    level:string;               //Regular, Bueno, Muy Bueno, Excelente
+    comments:string;
+}
+
+export interface Projects{
+    name:string;
+    url:string;
+    img?:string;
+}
