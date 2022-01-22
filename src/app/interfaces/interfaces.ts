@@ -19,7 +19,8 @@ export interface Experiencia{
     startYear:number;   
     endMonth?:string;       //Cuando esten vacias reemplazar por la palabra "Actualidad"
     endYear?:number;
-    timeElapsed: string;   
+    timeElapsed: string; 
+    comments:string;  
 }
 
 export interface Educacion{
@@ -41,6 +42,7 @@ export interface CursosCertificados{
     expeditionYear:number;
     IdCredential?:string;
     UrlCredential?:string;
+    comments:string;
     img?:string;
 }
 

@@ -3,39 +3,213 @@
     {
       "name": "Esteban Gabriel Jesus",
       "lastName": "Perea",
-      "age": 42
+      "email": "estebanperea@gmail.com",
+      "age": 42,
+      "userName": "Esteban674",
+      "password": "ArgProg2721",
+      "headLine": "Desarrollador Full Stack" ,
+      "nacionality": "Argentino",
+      "img?":""
     }
   ,
-  "education": [{
-    "school": "UTN",
-    "title": "Ingeniería",
-    "img": "https://www.ort.edu.ar/img/LogoOrtArgWeb2017.jpg",
-    "career": "Ingeniería en Sistemas de Información",
-    "score": 0,
-    "start": "2019",
-    "end": "2023"
+  "experiencia":[{
+    "position": "Encargado de planificacion de producción" ,      
+    "mode": "Jornada Completa" ,           
+    "company": "Oscar Scroza Equipos y Servicios Srl" ,       
+    "location": "Oncativo, Cordoba, Argentina" ,
+    "startMonth": "Dic" , 
+    "startYear": "2019" ,   
+    "endMonth": "",       
+    "endYear": "" ,
+    "timeElapsed": "7 años y 8 meses" ,
+    "comments":"Por necesidades propias de la empresa fui designado como encargado de la planificacion de la producción, puesto en que me desempeño hasta la fecha"
   },
   {
-    "school": "Centro de Enseñanza Técnica Industrial",
-    "title": "Tecnologo",
-    "img": "https://media-exp1.licdn.com/dms/image/C560BAQEUHhax7RCj0A/company-logo_100_100/0/1584819716706?e=1637798400&v=beta&t=4UkXYz39PCtn4PqDYbwXZNWPSC3MgoHckfDfqQLBlHc",
-    "career": "Desarrollo de Software",
-    "score": 82,
-    "start": "2014",
-    "end": "2018"
+    "position": "Encargado de Sistemas" ,      
+    "mode": "Jornada Completa" ,           
+    "company": "Oscar Scroza Equipos y Servicios Srl" ,       
+    "location": "Oncativo, Cordoba, Argentina" ,
+    "startMonth": "Jun" , 
+    "startYear": "2014" ,   
+    "endMonth": "Dic",       
+    "endYear": "2019" ,
+    "timeElapsed": "7 años y 8 meses" ,
+    "comments":"En los primeros dos años se implementó un sistema de gestión de producción de terceros (Capataz). A partir de marzo de 2017 se comenzó un proyecto de Software ERP para la producción en formato de aplicacion de escritorio (Windows Forms), programado en lenguaje C# bajo Visual Studio y utilizando SQL Server para las bases de datos"
   },
   {
-    "school": "Escuela Secundaria Técnica 14",
-    "title": "Técnico",
-    "img": "https://media-exp1.licdn.com/dms/image/C4E0BAQFhOoraRhsOSQ/company-logo_100_100/0/1590421269154?e=1637798400&v=beta&t=gyinTA0GPG1xIBDPj01L33mQHcdOdyMOdpoRHY640Pc",
-    "career": "Electronica, comunicacion y sistemas de control",
-    "score": 0,
-    "start": "2012",
-    "end": "2014"
+    "position": "Administativo de producción" ,      
+    "mode": "Jornada Completa" ,           
+    "company": "Georgalos SAICA" ,       
+    "location": "Río Segundo, Cordoba, Argentina" ,
+    "startMonth": "Jun" , 
+    "startYear": "2011" ,   
+    "endMonth": "Mar",       
+    "endYear": "2013" ,
+    "timeElapsed": "1 año y 9 meses" ,
+    "comments": ""
+  },
+  {
+    "position": "Gerencia de producción" ,      
+    "mode": "Jornada Completa" ,           
+    "company": "Orintrama Srl" ,       
+    "location": "Costa Sacate, Cordoba, Argentina" ,
+    "startMonth": "Ene" , 
+    "startYear": "2010" ,   
+    "endMonth": "Abr",       
+    "endYear": "2011" ,
+    "timeElapsed": "1 año y 4 meses" ,
+    "comments": "En este último período fui llamado para ocupar el puesto de gerente de producción de la empresa"
+  },
+  {
+    "position": "Administrativo de producción - Encargado de Sistemas" ,      
+    "mode": "Jornada Completa" ,           
+    "company": "Orintrama Srl" ,       
+    "location": "Costa Sacate, Cordoba, Argentina" ,
+    "startMonth": "Nov" , 
+    "startYear": "1999" ,   
+    "endMonth": "jul",       
+    "endYear": "2009" ,
+    "timeElapsed": "9 años y 8 meses" ,
+    "comments": "Ademas de las tareas propias de control, seguimiento y gestión de la producción, estuve a cargo del área de Sistemas de la empresa y de la implementacion de un software ERP Capataz"
+  },
+  {
+    "position": "Administativo de producción - Ayudante en Sistemas" ,      
+    "mode": "Jornada Completa" ,           
+    "company": "Orintrama Srl" ,       
+    "location": "Costa Sacate, Cordoba, Argentina" ,
+    "startMonth": "Dic" , 
+    "startYear": "1997" ,   
+    "endMonth": "Dic",       
+    "endYear": "1998" ,
+    "timeElapsed": "1 año y 1 mes" ,
+    "comments": "Carga inicial, actualización y mantenimiento de estructuras en Software de Gestion Flexware, de Sistmas Bejerman"
+  }
+ ]
+  ,
+  "educacion": [{
+    "school": "Instituto Superior Pascal" ,
+    "title": "Técnico Superior en Desarrollo de Software" ,
+    "career": "Desarrollo de Software" ,
+    "startMonth": "Ene" ,
+    "startYear": "2021" ,   
+    "endMonth": "Dic" ,
+    "endYear": "2023" , 
+    "comments": "Actualmente me encuentro cursando el segundo año" ,
+    "img?": "https://institutoisp.edu.ar/wp-content/uploads/2018/12/Isologo_ISP_transparente-01_H-1-e1545075048814.png"
+  },
+  {
+    "school": "Universidad Tecnológica Nacional",
+    "title": "Ingeniería" ,
+    "career": "Ingeniería Industrial" ,
+    "startMonth": "Feb" ,
+    "startYear": "2003" ,   
+    "endMonth": "Nov" ,
+    "endYear": "2003" , 
+    "comments": "La extensión áulica de Río Segundo cerró e imposiblitado por la distancia y horarios de trabajo no pude continuar" ,
+    "img?": "https://www.utn.edu.ar/images/logo-utn.png"
+  },
+  {
+    "school": "Universidad Nacional de Córdoba" ,
+    "title": "Ingeniería" ,
+    "career": "Ingeniería Aeronáutica" ,
+    "startMonth": "Feb" ,
+    "startYear": "2000" ,   
+    "endMonth": "Nov" ,
+    "endYear": "2000" , 
+    "comments": "No pude continuar mis estudios por problemas económicos" ,
+    "img?": "https://www.unc.edu.ar/sites/all/themes/unc/images/footer.svg"
+  },
+  {
+    "school": "Universidad Nacional de Córdoba" ,
+    "title": "Licenciatura" ,
+    "career": "Licenciatura en Física" ,
+    "startMonth": "Feb" ,
+    "startYear": "1999" ,   
+    "endMonth": "jul" ,
+    "endYear": "1999" , 
+    "comments": "No pude continuar mis estudios por problemas económicos" ,
+    "img?": "https://www.unc.edu.ar/sites/all/themes/unc/images/footer.svg"
   }
   ],
-
-  "profile": {
-    "name": "typicode"
+  "cursosCertificados":[{
+    "name": "Argentina Programa - #Yo Programo" ,                
+    "issuingAuthority": "Ministerio de Desarrollo Productivo - Cámara de la Industria Argentina del Software (CESSI) - Instituto Nacional de Tecnología Industrial (INTI)" ,  
+    "expeditionMonth": "May" ,
+    "expeditionYear": "2022" , 
+    "IdCredential?": "" , 
+    "UrlCredential?": "" , 
+    "comments": "En curso",
+    "img?": "" 
+  },
+  {
+    "name": "Argentina Programa - #Sé Programar" ,                
+    "issuingAuthority": "Ministerio de Desarrollo Productivo - Cámara de la Industria Argentina del Software (CESSI) - Subsecretaria de Economía del Conocimiento" , 
+    "expeditionMonth": "Oct" ,
+    "expeditionYear": "2021" , 
+    "IdCredential?": "087d_4XE1NAzp6SN" , 
+    "UrlCredential?": "https://mumuki.io/argentina-programa/certificates/verify/087d_4XE1NAzp6SN" , 
+    "comments": "Finalizado" ,
+    "img?": "" 
+  },
+  {
+    "name": "CCNA R&S: Routing and Switching Essentials" ,                
+    "issuingAuthority": "Cisco Networking Academy" ,  
+    "expeditionMonth": "Ago" ,
+    "expeditionYear": "2019" , 
+    "IdCredential?": "" , 
+    "UrlCredential?": "" , 
+    "comments": "" ,
+    "img?": "https://media-exp1.licdn.com/dms/image/C4E0BAQFgocdTGHthDA/company-logo_100_100/0/1581351014172?e=1651104000&v=beta&t=wwXubTYXDn-hf02bKNxm7HOifiHpeHOUtmubrI_xTsE" 
+  },
+  {
+    "name": "CCNA R&S: Introduction to Networks" ,                
+    "issuingAuthority": "Cisco Networking Academy" ,  
+    "expeditionMonth": "Ago" ,
+    "expeditionYear": "2019" , 
+    "IdCredential?": "" , 
+    "UrlCredential?": "" , 
+    "comments": "" ,
+    "img?": "https://media-exp1.licdn.com/dms/image/C4E0BAQFgocdTGHthDA/company-logo_100_100/0/1581351014172?e=1651104000&v=beta&t=wwXubTYXDn-hf02bKNxm7HOifiHpeHOUtmubrI_xTsE" 
+  },
+  {
+    "name": "Uso de Código de Barras" ,                
+    "issuingAuthority": "GS1 Argentina" ,  
+    "expeditionMonth": "Nov" ,
+    "expeditionYear": "2007" , 
+    "IdCredential?": "" , 
+    "UrlCredential?": "" , 
+    "comments": "" ,
+    "img?": "" 
+  },
+  {
+    "name": "Auditor de Calidad Iso9000/2000" ,                
+    "issuingAuthority": "IRAM" ,  
+    "expeditionMonth": "Jun" ,
+    "expeditionYear": "2006" , 
+    "IdCredential?": "" , 
+    "UrlCredential?": "" , 
+    "comments": "" ,
+    "img?": "" 
+  },
+  {
+    "name": "Técnico en Reparación y Mantenimiento de PC " ,                
+    "issuingAuthority": "PROMEL (Proyecto Mediterráneo Educativo Laboral) " ,  
+    "expeditionMonth": "Oct" ,
+    "expeditionYear": "2002" , 
+    "IdCredential?": "" , 
+    "UrlCredential?": "" , 
+    "comments": "" ,
+    "img?": "" 
+  },
+  {
+    "name": "Operador de PC" ,                
+    "issuingAuthority": "Instituto Jerónimo Luis de Cabrera" ,  
+    "expeditionMonth": "Nov" ,
+    "expeditionYear": "1996" , 
+    "IdCredential?": "" , 
+    "UrlCredential?": "" , 
+    "comments": "" ,
+    "img?": "" 
   }
+  ]
 }
