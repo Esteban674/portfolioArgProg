@@ -1,11 +1,24 @@
-<div class="container">
+<div class="container">  
     <div class="card-group">
-      <h2>Educación</h2>
+     <h2>Educación</h2>
       <ul>
-          <li>Educación 1</li>
-          <li>Educación 2</li>
-          <li>Educación 3</li>
-      </ul>
-    </div>
+        <li *ngFor="let education of educations">
+         <div>
+            <h3>{{education.school}}</h3>
+            <h4>{{education.title}}</h4>
+            <span>{{education.career}}</span><br>
+            <span><time>{{education.startMonth}}</time></span>
+            <span><time> {{education.startYear}}</time></span>
+            <span> - </span>
+            <span *ngIf="education.endMonth !== ''"><time>{{education.endMonth}}</time></span>
+            <span *ngIf="education.endMonth !== ''"><time> {{education.endYear}}</time></span>
+            <span *ngIf="education.endMonth === ''"><time>hasta la </time></span>
+            <span *ngIf="education.endMonth === ''"><time>fecha</time></span>
+            <br>
+            <span>Comentarios: {{education.comments}}</span>
+         </div>
+        </li>
+    </ul>
   </div>
+</div>
   

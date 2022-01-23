@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Experience, User } from '../interfaces/interfaces';
+import { CoursesCertified, Education, Experience, User } from '../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +17,14 @@ export class PortfolioService {
 
  getExperience(): Observable<Experience[]>{
   return this.http.get<Experience[]>(this.apiUrl + '/experience');
+ }
+
+ getEducation(): Observable<Education[]>{
+  return this.http.get<Education[]>(this.apiUrl + '/education');
+ }
+
+ getCursos(): Observable<CoursesCertified[]>{
+   return this.http.get<CoursesCertified[]>(this.apiUrl + '/coursesCertified');
  }
 
 }

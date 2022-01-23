@@ -40,8 +40,8 @@ export interface CoursesCertified{
     issuingAuthority:string;    //Empresa o autoridad emisora
     expeditionMonth:string;
     expeditionYear:number;
-    IdCredential?:string;
-    UrlCredential?:string;
+    IdCredential:string;
+    UrlCredential:string;
     comments:string;
     img?:string;
 }

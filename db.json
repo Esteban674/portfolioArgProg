@@ -22,7 +22,7 @@
     "endMonth": "",       
     "endYear": "" ,
     "timeElapsed": "7 años y 8 meses" ,
-    "comments":"Por necesidades propias de la empresa fui designado como encargado de la planificacion de la producción, puesto en que me desempeño hasta la fecha"
+    "comments":"Por necesidades propias de la empresa fui designado como encargado de la planificacion de la producción, puesto en que me desempeño actualmente"
   },
   {
     "position": "Encargado de Sistemas" ,      
@@ -136,8 +136,8 @@
     "issuingAuthority": "Ministerio de Desarrollo Productivo - Cámara de la Industria Argentina del Software (CESSI) - Instituto Nacional de Tecnología Industrial (INTI)" ,  
     "expeditionMonth": "May" ,
     "expeditionYear": "2022" , 
-    "IdCredential?": "" , 
-    "UrlCredential?": "" , 
+    "IdCredential": "" , 
+    "UrlCredential": "" , 
     "comments": "En curso",
     "img?": "" 
   },
@@ -146,8 +146,8 @@
     "issuingAuthority": "Ministerio de Desarrollo Productivo - Cámara de la Industria Argentina del Software (CESSI) - Subsecretaria de Economía del Conocimiento" , 
     "expeditionMonth": "Oct" ,
     "expeditionYear": "2021" , 
-    "IdCredential?": "087d_4XE1NAzp6SN" , 
-    "UrlCredential?": "https://mumuki.io/argentina-programa/certificates/verify/087d_4XE1NAzp6SN" , 
+    "IdCredential": "087d_4XE1NAzp6SN" , 
+    "UrlCredential": "https://mumuki.io/argentina-programa/certificates/verify/087d_4XE1NAzp6SN" , 
     "comments": "Finalizado" ,
     "img?": "" 
   },
@@ -156,8 +156,8 @@
     "issuingAuthority": "Cisco Networking Academy" ,  
     "expeditionMonth": "Ago" ,
     "expeditionYear": "2019" , 
-    "IdCredential?": "" , 
-    "UrlCredential?": "" , 
+    "IdCredential": "" , 
+    "UrlCredential": "" , 
     "comments": "" ,
     "img?": "https://media-exp1.licdn.com/dms/image/C4E0BAQFgocdTGHthDA/company-logo_100_100/0/1581351014172?e=1651104000&v=beta&t=wwXubTYXDn-hf02bKNxm7HOifiHpeHOUtmubrI_xTsE" 
   },
@@ -166,8 +166,8 @@
     "issuingAuthority": "Cisco Networking Academy" ,  
     "expeditionMonth": "Ago" ,
     "expeditionYear": "2019" , 
-    "IdCredential?": "" , 
-    "UrlCredential?": "" , 
+    "IdCredential": "" , 
+    "UrlCredential": "" , 
     "comments": "" ,
     "img?": "https://media-exp1.licdn.com/dms/image/C4E0BAQFgocdTGHthDA/company-logo_100_100/0/1581351014172?e=1651104000&v=beta&t=wwXubTYXDn-hf02bKNxm7HOifiHpeHOUtmubrI_xTsE" 
   },
@@ -176,8 +176,8 @@
     "issuingAuthority": "GS1 Argentina" ,  
     "expeditionMonth": "Nov" ,
     "expeditionYear": "2007" , 
-    "IdCredential?": "" , 
-    "UrlCredential?": "" , 
+    "IdCredential": "" , 
+    "UrlCredential": "" , 
     "comments": "" ,
     "img?": "" 
   },
@@ -186,8 +186,8 @@
     "issuingAuthority": "IRAM" ,  
     "expeditionMonth": "Jun" ,
     "expeditionYear": "2006" , 
-    "IdCredential?": "" , 
-    "UrlCredential?": "" , 
+    "IdCredential": "" , 
+    "UrlCredential": "" , 
     "comments": "" ,
     "img?": "" 
   },
@@ -196,8 +196,8 @@
     "issuingAuthority": "PROMEL (Proyecto Mediterráneo Educativo Laboral) " ,  
     "expeditionMonth": "Oct" ,
     "expeditionYear": "2002" , 
-    "IdCredential?": "" , 
-    "UrlCredential?": "" , 
+    "IdCredential": "" , 
+    "UrlCredential": "" , 
     "comments": "" ,
     "img?": "" 
   },
@@ -206,8 +206,8 @@
     "issuingAuthority": "Instituto Jerónimo Luis de Cabrera" ,  
     "expeditionMonth": "Nov" ,
     "expeditionYear": "1996" , 
-    "IdCredential?": "" , 
-    "UrlCredential?": "" , 
+    "IdCredential": "" , 
+    "UrlCredential": "" , 
     "comments": "" ,
     "img?": "" 
   }

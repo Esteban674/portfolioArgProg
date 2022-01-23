@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="card-group">
+      <h2>Cursos y Certificaciones</h2> 
+      <ul>
+          <li *ngFor="let course of courses">
+            <div>
+              <h3>{{course.name}}</h3>
+              <span>{{course.issuingAuthority}}</span><br>
+              <span>Fecha de expedición: </span>
+              <span><time>{{course.expeditionMonth}}</time></span>
+              <span><time> {{course.expeditionYear}}</time></span><br>
+              <span *ngIf="course.IdCredential !== ''">IdCredential: {{course.IdCredential}}<br></span>
+              <span *ngIf="course.UrlCredential !== ''">UrlCredential: <a href="{{course.UrlCredential}}" target="_blank">{{course.UrlCredential}}</a><br></span>
+              <span *ngIf="course.comments !== ''">Comentarios: {{course.comments}}</span>
+            </div>
+          </li>
+      </ul>  
+    </div>
+  </div>

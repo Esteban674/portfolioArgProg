@@ -4,7 +4,7 @@
     margin: 10px 0px;
     padding: 20px 10px 10px 20px;
     border: 1px solid #ccc;
- 
+    display: block;
 }
 
 ul{
@@ -12,5 +12,5 @@ ul{
  }
  
  li{
-     margin:10px 15px 15px 150px;
- }
+    margin:10px 15px 15px 50px;
+}
