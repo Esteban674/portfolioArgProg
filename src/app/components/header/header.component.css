@@ -1,10 +1,11 @@
 
 .imgArgProg{
     width: 200px;
-  
-    background-color: #00358e;
 }
 
+.border-bottom{
+    border-bottom: 1px solid #ADB9D3 !important;
+}
 .imgCarousel{
     height: 300px;
     border-radius: 24px;
@@ -14,44 +15,40 @@ h1{
     font-family: 'Encode Sans Expanded', sans-serif;
     font-weight: bold;
     font-size: 1.2em !important;
+    color: #ADB9D3;
 }
 
-.iconRedF{
-    font-size: 2em;
+h1:hover{
+    font-size: 1.3em !important;
+    color: #fafafa;
+    text-shadow: 0 4px 17px rgba(255, 255, 255, 0.35);
+}
+
+.iconRed{
+    margin: 0px 7px;
+    font-size: 1.5em;
     color: #ADB9D3;
     cursor: pointer;
 }
 
-.iconRedF:hover{
+.iconRed.iconRedF:hover{
     color: #3B5998;
+    font-size: 2.3em;
 }
 
-.iconRedI{
-    font-size: 2em;
-    color: #ADB9D3;
-    cursor: pointer;
-}
 
-.iconRedI:hover{
+.iconRed.iconRedI:hover{
    color: #bb0f90;
+   font-size: 2.3em;
 }
 
-.iconRedL{
-    font-size: 2em;
-    color: #ADB9D3;
-    cursor: pointer;
-}
 
-.iconRedL:hover{
+.iconRed.iconRedL:hover{
     color: #0e76a8;
+    font-size: 2.3em;
 }
 
-.iconRedG{
-    font-size: 2em;
-    color: #ADB9D3;
-    cursor: pointer;
-}
-
-.iconRedG:hover{
-    color: #1b1f23;
+.iconRed.iconRedG:hover{
+    color: #fafafa;
+    font-size: 2.3em;
 }

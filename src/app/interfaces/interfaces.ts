@@ -7,7 +7,7 @@ export interface User {
     password:string;
     headLine:string;    //Ej: Desarrollador Full Stack
     nacionality:string;
-    img?:string;
+    img:string;
 }
 
 export interface Experience{

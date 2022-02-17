@@ -1,0 +1,47 @@
+
+  .card-container {
+    position: relative;
+    justify-content: center;
+    margin-top: 10px;
+    display:block;
+  }
+
+  .card {
+    all: unset;
+    border-radius: 7px;
+    border: 1px solid #ADB9D3;
+    background-color: #353041;
+    height: 40px;
+    width: 200px;
+    margin: 0px 0px 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    line-height: 24px;
+    font-size: 20px;
+  }
+
+  .card-container .card:not(:last-child) {
+    margin-right: 0;
+  }
+
+  .card.card-small {
+    height: 16px;
+    width: 168px;
+  }
+
+  .card-container .card:not(.highlight-card) {
+    cursor: pointer;
+  }
+
+  .card-container .card:not(.highlight-card):hover {
+    transform: translateY(-5px);
+    font-size: 23px;
+    box-shadow: 0 4px 17px rgba(255, 255, 255, 0.55);
+  }
+
+ 
+

@@ -10,6 +10,9 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { HabilidadesComponent } from './components/habilidades/habilidades.component';
 import { CursosComponent } from './components/cursos/cursos.component';
+import { IniciarSesionComponent } from './components/iniciar-sesion/iniciar-sesion.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -19,11 +22,14 @@ import { CursosComponent } from './components/cursos/cursos.component';
     ExperienciaComponent,
     EducacionComponent,
     HabilidadesComponent,
-    CursosComponent
+    CursosComponent,
+    IniciarSesionComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

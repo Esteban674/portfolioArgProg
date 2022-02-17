@@ -1,10 +1,20 @@
 
+
+html, body { height: 100%; }
+body {
+     margin: 0;
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    color: #fff;
+    background-color: #1f2d40;
+    }
+
+
 .card-group {
     border-radius: 24px;
-    margin: 10px 0px;
+    margin-top: 10px;
     padding: 20px 10px 10px 20px;
-    border: 1px solid #ccc;
-    display: block;
+    border: 1px solid #ADB9D3;
+    display: flex;
 }
 
 ul{
@@ -13,4 +23,16 @@ ul{
  
  li{
     margin:10px 15px 15px 50px;
+}
+
+.prueba{
+ display: flex !important;
+ float:left !important;
+ flex-wrap: wrap !important;
+
+}
+
+
+.divmenu{
+    min-width: 200px !important;
 }

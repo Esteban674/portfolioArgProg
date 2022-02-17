@@ -1,32 +1,26 @@
 <div class="container"> 
     <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">  
       <a href="https://argentinaprograma.inti.gob.ar" target="_blank" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-        <img class="imgArgProg" src="/assets/img/ARGENTINA-PROGRAMA2.jpg" alt="LogoArgProg">
+        <img class="imgArgProg" src="/assets/img/APLogo2.png" alt="LogoArgProg">
         <h1 class="fs-6 ms-2 pt-2">#YoProgramo</h1>
       </a>
-     
-  
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 link-secondary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Home</font></font></a></li>
-        <li><a href="#" class="nav-link px-2 link-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Características</font></font></a></li>
-  
-      </ul>
-  
-      <div class="col-md-2 text-end p-2">
-        <button type="button" class="btn btn-outline-primary me-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Login</font></font></button>
-        <button type="button" class="btn btn-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sign-up</font></font></button>
+      <div class="col-md-3 text-end p-2">
+        <button type="button" class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Login
+         </button>
+        <button type="button" class="btn btn-outline-light"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sign-up</font></font></button>
       </div>
-      <div class="col-md-0 p-1">
-        <a href="https://www.facebook.com/people/Esteban-Gabriel-Jes%C3%BAs-Perea/100010899370670/" target="_blank"><i class="bi bi-facebook iconRedF"></i></a> 
+      <div class="col-md-0">
+        <a href="https://www.facebook.com/people/Esteban-Gabriel-Jes%C3%BAs-Perea/100010899370670/" target="_blank"><i class="bi bi-facebook iconRed iconRedF"></i></a> 
       </div>
-      <div class="col-md-0 p-1">
-        <a href="https://www.instagram.com/estebangabrieljesus/" target="_blank"><i class="bi bi-instagram iconRedI"></i></a>
+      <div class="col-md-0">
+        <a href="https://www.instagram.com/estebangabrieljesus/" target="_blank"><i class="bi bi-instagram iconRed iconRedI"></i></a>
       </div>
-      <div class="col-md-0 p-1">
-        <a href="https://www.linkedin.com/in/esteban-perea-211582224/?originalSubdomain=ar" target="_blank"><i class="bi bi-linkedin iconRedL"></i></a>
+      <div class="col-md-0">
+        <a href="https://www.linkedin.com/in/esteban-perea-211582224/?originalSubdomain=ar" target="_blank"><i class="bi bi-linkedin iconRed iconRedL"></i></a>
       </div>
-        <div class="col-md-0 p-1">
-         <a href="https://github.com/Esteban674" target="_blank"> <i class="bi bi-github iconRedG"></i></a>
+        <div class="col-md-0">
+         <a href="https://github.com/Esteban674" target="_blank"> <i class="bi bi-github iconRed iconRedG"></i></a>
         </div>
     </header>
   </div>
@@ -60,3 +54,41 @@
       </div>
 </div>
   
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Iniciar Sesión</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form class="m-5">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
