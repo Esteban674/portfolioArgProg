@@ -32,6 +32,7 @@ h1{
     font-weight: bold;
     font-size: 1.2em !important;
     color: #ADB9D3;
+    margin-top: 15px;
 }
 
 h1:hover{
