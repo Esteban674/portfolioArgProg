@@ -3,12 +3,28 @@
     width: 200px;
 }
 
+.imgPerfil{
+    border-radius: 50%;
+    width: 255px;
+    position: absolute;
+    margin-top: -252px;
+    z-index: 1;
+}
+
+
 .border-bottom{
     border-bottom: 1px solid #ADB9D3 !important;
 }
+
+.anchoCarousel{
+    margin-left: 100px;
+}
+
 .imgCarousel{
-    height: 300px;
+    height: 250px;
     border-radius: 24px;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
 }
 
 h1{
