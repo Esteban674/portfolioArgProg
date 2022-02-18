@@ -1,5 +1,5 @@
 <div>
-  <div class=card-group>
+  <div class="p-card">
     <h2>Experiencia</h2> 
     <ul>
         <li *ngFor="let experience of experiences; let i = index">
@@ -21,9 +21,7 @@
           </div>
           <div>
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editarExperiencia">
-           Editar
-          </button>
+          <button pButton type="button" icon="pi pi-pencil" iconPos="left" label="Editar" data-bs-toggle="modal" data-bs-target="#editarExperiencia"></button>
           </div>
         </li>
     </ul>  
