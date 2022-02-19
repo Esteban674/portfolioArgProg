@@ -11,6 +11,7 @@ export interface User {
 }
 
 export interface Experience{
+    id:number;
     position:string;        //Cargo
     mode:string;            //Tipo de empleo Ej: Jornada Completa
     company:string;         //Nombre de la empresa

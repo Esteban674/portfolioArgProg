@@ -1,53 +1,58 @@
-<div class="container">
-    <div class="card-group">
+<div>
+    <div class="p-card page-border p-4">
       <h2>Habilidades Duras</h2>
-     
-      <div class="container2 ">
-          <div class="card">
-              <div class="box">
-                  <div class="percent">
-                      <svg>
-                          <circle cx="70" cy="70" r="70"></circle>
-                          <circle cx="70" cy="70" r="70"></circle>
-                      </svg>
-                      <div class="number">
-                          <h2>90<span>%</span></h2>
-                      </div>
+      <hr>
+      <div class="grid page-border page-card mt-3">
+        <div class="col-12">
+          <div class="col float-top-right">
+            <!-- Button trigger modal -->
+            <button pButton type="button" 
+                    class="p-button-rounded float-end" 
+                    icon="pi pi-pencil" iconPos="left" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#editarSkills"
+                    title="Editar"
+                    ></button>
+          </div>  
+      <p-organizationChart [value]="data1"
+          styleClass="company"
+          >
+          <ng-template let-node pTemplate="person">
+              <div class="node-header p-corner-top">{{node.label}}</div>
+              <div class="node-content" [class]="node.styleClass">
+                <div *ngIf="node.data.name">
+                  <div><p-chip label="{{node.data.name}}" image="./assets/img/{{node.data.name}}.png"></p-chip></div>
+                  <div><p-chip label="{{node.data.name1}}" image="./assets/img/{{node.data.name1}}.png"></p-chip></div>
+                  <div><p-chip label="{{node.data.name2}}" image="./assets/img/{{node.data.name2}}.png"></p-chip></div>
                   </div>
-                  <h2 class="text">Html</h2>
+                  <div *ngIf="node.data.avatar" 
+                  ><img src="./assets/img/{{node.data.avatar}}" width="80" height="80"> </div>
               </div>
-          </div>
-        <div class="card">
-            <div class="box">
-                <div class="percent">
-                    <svg>
-                        <circle cx="70" cy="70" r="70"></circle>
-                        <circle cx="70" cy="70" r="70"></circle>
-                    </svg>
-                    <div class="number">
-                        <h2>85<span>%</span></h2>
-                    </div>
-                </div>
-                <h2 class="text">CSS</h2>
-            </div>
-        </div>
-        <div class="card">
-            <div class="box">
-                <div class="percent">
-                    <svg>
-                        <circle cx="70" cy="70" r="70"></circle>
-                        <circle cx="70" cy="70" r="70"></circle>
-                    </svg>
-                    <div class="number">
-                        <h2>60<span>%</span></h2>
-                    </div>
-                </div>
-                <h2 class="text">javascript</h2>
-            </div>
-        </div>
+          </ng-template>
+      </p-organizationChart>
     </div>
+  </div>  
 </div>
 </div>
 
       
 
+<!-- Modal -->
+<div class="modal fade" id="editarSkills" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content p-card">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Editar Habilidades</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

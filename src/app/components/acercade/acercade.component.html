@@ -1,16 +1,42 @@
 
 
-<div class="container">
-    <div class="card-present">
-        <div>
+<div>
+    <div class="p-card page-border p-4">
+
           <h2>{{user.headLine}}</h2>
-          <div>
-            <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
-          </div>
-        </div>
-        <div>
+          <hr>
+          <div class="grid page-border page-card mt-3 me-3">
+            <div class="col-11">
           <p>Mi nombre es {{user.name}} {{user.lastName}}  Lorem ipsum dolor sit amet consectetur adipisicing elit.que tenetur explicabo voluptates quae libero delenitique tenetur explicabo voluptates quae libero deleniti Eaque tenetur explicabo voluptates quae libero deleniti praesentium.</p>
-        </div>
-      </div>
+            </div>
+          <div class="col-1">
+          <!-- Button trigger modal -->
+          <button pButton type="button" 
+                class="p-button-rounded float-end" 
+                icon="pi pi-pencil" iconPos="left" 
+                data-bs-toggle="modal" 
+                data-bs-target="#editarAcercade"
+                title="Editar"
+                ></button>
+        </div>  
+       </div>  
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="editarAcercade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content p-card">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Editar Acerca de</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>

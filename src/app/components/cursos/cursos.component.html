@@ -1,10 +1,12 @@
-<div class="container">
-    <div class="card-group">
+<div>
+    <div class="p-card page-border p-4">
       <h2>Cursos y Certificaciones</h2> 
+      <hr>
       <ul>
           <li *ngFor="let course of courses">
-            <div>
-              <h3>{{course.name}}</h3>
+            <div class="grid page-border page-card mt-3 me-3">
+              <div class="col-11">
+              <h4>{{course.name}}</h4>
               <span>{{course.issuingAuthority}}</span><br>
               <span>Fecha de expedición: </span>
               <span><time>{{course.expeditionMonth}}</time></span>
@@ -13,7 +15,38 @@
               <span *ngIf="course.UrlCredential !== ''">UrlCredential: <a href="{{course.UrlCredential}}" target="_blank">{{course.UrlCredential}}</a><br></span>
               <span *ngIf="course.comments !== ''">Comentarios: {{course.comments}}</span>
             </div>
+            <div class="col-1">
+              <!-- Button trigger modal -->
+              <button pButton type="button" 
+                      class="p-button-rounded float-end" 
+                      icon="pi pi-pencil" iconPos="left" 
+                      data-bs-toggle="modal" 
+                      data-bs-target="#editarCursos"
+                      title="Editar"
+                      ></button>
+            </div>  
+          </div>   
           </li>
       </ul>  
     </div>
   </div>
+
+
+  <!-- Modal -->
+<div class="modal fade" id="editarCursos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content p-card">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Editar Cursos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>

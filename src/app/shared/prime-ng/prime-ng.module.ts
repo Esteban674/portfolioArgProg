@@ -4,6 +4,8 @@ import {ButtonModule} from 'primeng/button';
 import {CardModule} from 'primeng/card';
 import {MenuModule} from 'primeng/menu';
 import {TieredMenuModule} from 'primeng/tieredmenu';
+import {OrganizationChartModule} from 'primeng/organizationchart';
+import { ChipModule } from 'primeng/chip';
 
 
 @NgModule({
@@ -11,8 +13,9 @@ import {TieredMenuModule} from 'primeng/tieredmenu';
     ButtonModule,
     CardModule,
     MenuModule,
-    TieredMenuModule
-
+    TieredMenuModule,
+    OrganizationChartModule,
+    ChipModule
   ]
 })
 export class PrimeNgModule { }

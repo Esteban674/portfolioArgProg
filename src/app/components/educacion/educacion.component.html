@@ -1,11 +1,13 @@
-<div class="container">  
-    <div class="card-group">
+<div>  
+    <div class="p-card page-border p-4">
      <h2>Educación</h2>
+     <hr>
       <ul>
         <li *ngFor="let education of educations">
-         <div>
-            <h3>{{education.school}}</h3>
-            <h4>{{education.title}}</h4>
+          <div class="grid page-border page-card mt-3 me-3">
+            <div class="col-11">
+            <h4>{{education.school}}</h4>
+            <h5>{{education.title}}</h5>
             <span>{{education.career}}</span><br>
             <span><time>{{education.startMonth}}</time></span>
             <span><time> {{education.startYear}}</time></span>
@@ -16,9 +18,41 @@
             <span *ngIf="education.endMonth === ''"><time>fecha</time></span>
             <br>
             <span>Comentarios: {{education.comments}}</span>
-         </div>
+          </div>
+          <div class="col-1">
+            <!-- Button trigger modal -->
+            <button pButton type="button" 
+                    class="p-button-rounded float-end" 
+                    icon="pi pi-pencil" 
+                    iconPos="left" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#editarEducacion"
+                    title="Editar"
+                    ></button>
+          </div>  
+        </div>   
         </li>
     </ul>
   </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="editarEducacion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content p-card">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Editar Educación</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
   

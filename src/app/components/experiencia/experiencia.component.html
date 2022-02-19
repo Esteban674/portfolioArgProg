@@ -1,13 +1,26 @@
 <div>
-  <div class="p-card">
-    <h2>Experiencia</h2> 
+  <div class="p-card page-border p-4">
+    <div class="row">
+      <div class="col d-sm-inline-flex">
+      <h2>Experiencia</h2> 
+      <button pButton type="button" 
+      class="p-button-rounded float-end ms-3" 
+      icon="pi pi-plus" iconPos="left" 
+      data-bs-toggle="modal" 
+      data-bs-target="#agregarExperiencia"
+      title="Agregar"
+      ></button>
+      </div>
+    </div>
+    <hr>
     <ul>
         <li *ngFor="let experience of experiences; let i = index">
-          <div>
-            <h3>{{experience.position}}</h3>
-            <span>Modalidad: {{experience.mode}}</span><br>
-            <span>Empresa: {{experience.company}}</span><br>
-            <span>Ubicación: {{experience.location}}</span><br>
+          <div class="grid page-border page-card mt-3 me-3">
+          <div class="col-11">
+            <h4>{{experience.position}}</h4>
+            <span><b>Modalidad:</b> {{experience.mode}}</span><br>
+            <span><b>Empresa:</b> {{experience.company}}</span><br>
+            <span><b>Ubicación:</b> {{experience.location}}</span><br>
             <span><time>{{experience.startMonth}}</time></span>
             <span><time> {{experience.startYear}}</time></span>
             <span> - </span>
@@ -16,23 +29,30 @@
             <span *ngIf="experience.endMonth === ''"><time>hasta la </time></span>
             <span *ngIf="experience.endMonth === ''"><time>fecha</time></span>
             <br>
-            <span>Tiempo transcurrido: {{experience.timeElapsed}}</span><br>
-            <p *ngIf="experience.comments !== ''">Comentarios: {{experience.comments}}</p>
+            <span><b>Tiempo transcurrido:</b> {{experience.timeElapsed}}</span><br>
+            <p *ngIf="experience.comments !== ''"><b>Comentarios:</b> {{experience.comments}}</p>
           </div>
-          <div>
-          <!-- Button trigger modal -->
-          <button pButton type="button" icon="pi pi-pencil" iconPos="left" label="Editar" data-bs-toggle="modal" data-bs-target="#editarExperiencia"></button>
-          </div>
+          <div class="col-1">
+            <!-- Button trigger modal -->
+            <button pButton type="button" 
+                    class="p-button-rounded float-end" 
+                    icon="pi pi-pencil" iconPos="left" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#editarExperiencia"
+                    title="Editar"
+                    ></button>
+          </div>  
+        </div>   
         </li>
     </ul>  
   </div>
 </div>
 
 
-<!-- Modal -->
+<!-- Modal Editar -->
 <div class="modal fade" id="editarExperiencia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+    <div class="modal-content p-card">
       <div class="modal-header">
         <h5 class="modal-title" id="staticBackdropLabel">Editar Experiencia</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -41,8 +61,27 @@
         ...
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Agregar -->
+<div class="modal fade" id="agregarExperiencia" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content p-card">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Agregar Experiencia</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary">Confirmar</button>
       </div>
     </div>
   </div>

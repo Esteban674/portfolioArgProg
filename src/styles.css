@@ -2,12 +2,10 @@ html, body {
     margin: 10px;
     background-color: var(--surface-b);
     font-family: var(--font-family);
-    color: var(--text-color);
+    /* color: var(--text-color); */
+    color: rgba(255, 255, 255, 0.8);
 }
 
-/* .text-layout {
-    color: var(--text-color);
-} */
 
 .card-group {
     border-radius: 24px;
@@ -17,6 +15,17 @@ html, body {
     display: flex;
 }
 
+.page-border {
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.page-card{
+    background-color: var(--surface-b);
+}
+
+
 ul{
     list-style-type: none;
  }
@@ -25,12 +34,8 @@ ul{
     margin:10px 15px 15px 50px;
 }
 
-.prueba{
-  background-color: black;
-
-}
-
 
 .divmenu{
     min-width: 200px !important;
 }
+
