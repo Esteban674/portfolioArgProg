@@ -74,7 +74,7 @@
 <button pButton type="button" label="Cancelar" class="p-button-secondary float-end me-2" [routerLink]="'/experiencia'"></button>
 <p-confirmDialog #cd [style]="{width: '50vw'}">
     <ng-template pTemplate="header">
-        <h5>Se {{(experiencia.id)? ((elimina)? 'eliminara' : 'actualizará') : 'agregará'}} la experiencia</h5>
+        <h5>Se {{(experiencia.id)? ((elimina)? 'eliminará' : 'actualizará') : 'agregará'}} la experiencia</h5>
     </ng-template>
     <ng-template pTemplate="footer">
         <button type="button" pButton class="p-button-danger" icon="pi pi-times" label="No" (click)="cd.reject()"></button>
