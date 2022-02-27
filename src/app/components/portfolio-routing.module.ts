@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddexperienceComponent } from './forms/addexperience/addexperience.component';
 import { AcercadeComponent } from './acercade/acercade.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { CursosComponent } from './cursos/cursos.component';
@@ -13,6 +14,9 @@ const routes: Routes = [
     children: [
       { path: 'acercade', component: AcercadeComponent},
       { path: 'experiencia', component: ExperienciaComponent},
+      { path: 'experiencia/agregar', component: AddexperienceComponent},
+      { path: 'experiencia/editar/:id', component: AddexperienceComponent},
+      { path: 'experiencia/eliminar/:id', component: AddexperienceComponent},
       { path: 'educacion', component: EducacionComponent},
       { path: 'cursos', component: CursosComponent},
       { path: 'habilidades', component: HabilidadesComponent},

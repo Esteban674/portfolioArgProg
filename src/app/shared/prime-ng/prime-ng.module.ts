@@ -6,6 +6,15 @@ import {MenuModule} from 'primeng/menu';
 import {TieredMenuModule} from 'primeng/tieredmenu';
 import {OrganizationChartModule} from 'primeng/organizationchart';
 import { ChipModule } from 'primeng/chip';
+import {InputTextModule} from 'primeng/inputtext';
+import {CalendarModule} from 'primeng/calendar';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {InputNumberModule} from 'primeng/inputnumber';
+import {DropdownModule} from 'primeng/dropdown';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {MessagesModule} from 'primeng/messages';
+import {ToastModule} from 'primeng/toast';
+
 
 
 @NgModule({
@@ -15,7 +24,15 @@ import { ChipModule } from 'primeng/chip';
     MenuModule,
     TieredMenuModule,
     OrganizationChartModule,
-    ChipModule
+    ChipModule,
+    InputTextModule,
+    CalendarModule,
+    InputTextareaModule,
+    InputNumberModule,
+    DropdownModule,
+    ConfirmDialogModule,
+    MessagesModule,
+    ToastModule
   ]
 })
 export class PrimeNgModule { }

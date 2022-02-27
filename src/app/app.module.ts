@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +15,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { PrimeNgModule } from './shared/prime-ng/prime-ng.module';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { MenuComponent } from './shared/menu/menu.component';
+import { AddexperienceComponent } from './components/forms/addexperience/addexperience.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
+import localeEsp from '@angular/common/locales/es';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localeEsp);
 
 @NgModule({
   declarations: [
@@ -27,16 +34,21 @@ import { MenuComponent } from './shared/menu/menu.component';
     CursosComponent,
     IniciarSesionComponent,
     ContactoComponent,
-    MenuComponent
+    MenuComponent,
+    AddexperienceComponent,
+
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     AppRoutingModule,
-    PrimeNgModule
+    PrimeNgModule,
   ],
-  providers: [],
+  providers: [
+     {provide: LOCALE_ID, useValue: 'es'}
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

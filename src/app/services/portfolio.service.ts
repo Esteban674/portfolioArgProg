@@ -26,6 +26,10 @@ export class PortfolioService {
  getExperience(): Observable<Experience[]>{
   return this.http.get<Experience[]>(`${this.apiUrlL}/experience`);
  }
+
+ getExperiencePorId(id: string): Observable<Experience>{
+  return this.http.get<Experience>(`${this.apiUrlL}/experience/${id}`);
+ }
  
  addExperience(experience:Experience): Observable<Experience>{
    return this.http.post<Experience>(`${this.apiUrlL}/experience`, experience)
@@ -35,6 +39,9 @@ export class PortfolioService {
    return this.http.put<Experience>(`${this.apiUrlL}/experience/${experience.id}`, experience)
  }
 
+ deleteExperience(id: number): Observable<Experience>{
+  return this.http.delete<Experience>(`${this.apiUrlL}/experience/${id}`);
+ }
 
  getEducation(): Observable<Education[]>{
   return this.http.get<Education[]>(`${this.apiUrlL}/education`);

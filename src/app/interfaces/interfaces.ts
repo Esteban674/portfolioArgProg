@@ -11,17 +11,18 @@ export interface User {
 }
 
 export interface Experience{
-    id:number;
+    id?:number;
     position:string;        //Cargo
-    mode:string;            //Tipo de empleo Ej: Jornada Completa
+    mode:Mode;            //Tipo de empleo Ej: Jornada Completa
     company:string;         //Nombre de la empresa
     location:string;        //Direccion Ej: Pilar, Cordoba, Argentina 
-    startMonth: string; 
-    startYear:number;   
-    endMonth?:string;       //Cuando esten vacias reemplazar por la palabra "Actualidad"
-    endYear?:number;
-    timeElapsed: string; 
+    startDate: string; //  
+    endDate?: string;       //Cuando esten vacias reemplazar por la palabra "Actualidad"
     comments:string;  
+}
+
+export interface Mode {
+    name:string;
 }
 
 export interface Education{

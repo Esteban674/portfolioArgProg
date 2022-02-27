@@ -1,394 +1,426 @@
 {
-  "user": 
+  "user": {
+    "name": "Esteban Gabriel Jesus",
+    "lastName": "Perea",
+    "email": "estebanperea@gmail.com",
+    "age": 42,
+    "userName": "Esteban674",
+    "password": "ArgProg2721",
+    "headLine": "Desarrollador Full Stack",
+    "nacionality": "Argentino",
+    "img": ""
+  },
+  "experience": [
     {
-      "name": "Esteban Gabriel Jesus",
-      "lastName": "Perea",
-      "email": "estebanperea@gmail.com",
-      "age": 42,
-      "userName": "Esteban674",
-      "password": "ArgProg2721",
-      "headLine": "Desarrollador Full Stack" ,
-      "nacionality": "Argentino",
-      "img":""
+      "id": 1,
+      "position": "Encargado de planificacion de producción",
+      "mode": {
+        "name": "Jornada Completa"
+      },
+      "company": "Oscar Scroza Equipos y Servicios Srl",
+      "location": "Oncativo, Cordoba, Argentina",
+      "startDate": "12/05/2022",
+      "endDate": "",
+      "comments": "Por necesidades propias de la empresa fui designado como encargado de la planificacion de la producción, puesto en que me desempeño actualmente"
+    },
+    {
+      "id": 2,
+      "position": "Encargado de Sistemas",
+      "mode": {
+        "name": "Jornada Completa"
+      },
+      "company": "Oscar Scroza Equipos y Servicios Srl",
+      "location": "Oncativo, Cordoba, Argentina",
+      "startDate": "06/01/2014",
+      "endDate": "12/01/2019",
+      "comments": "En los primeros dos años se implementó un sistema de gestión de producción de terceros (Capataz). A partir de marzo de 2017 se comenzó un proyecto de Software ERP para la producción en formato de aplicacion de escritorio (Windows Forms), programado en lenguaje C# bajo Visual Studio y utilizando SQL Server para las bases de datos"
+    },
+    {
+      "id": 3,
+      "position": "Administrativo de producción",
+      "mode": {
+        "name": "Jornada Completa"
+      },
+      "company": "Georgalos SAICA",
+      "location": "Río Segundo, Cordoba, Argentina",
+      "startDate": "06/14/2011",
+      "endDate": "03/20/2013",
+      "comments": ""
+    },
+    {
+      "id": 4,
+      "position": "Gerencia de producción",
+      "mode": {
+        "name": "Jornada Completa"
+      },
+      "company": "Orintrama Srl",
+      "location": "Costa Sacate, Cordoba, Argentina",
+      "startDate": "01/01/2010",
+      "endDate": "04/23/2011",
+      "comments": "En este último período fui llamado para ocupar el puesto de gerente de producción de la empresa"
+    },
+    {
+      "id": 5,
+      "position": "Administrativo de producción - Encargado de Sistemas",
+      "mode": {
+        "name": "Jornada Completa"
+      },
+      "company": "Orintrama Srl",
+      "location": "Costa Sacate, Cordoba, Argentina",
+      "startDate": "11/20/1999",
+      "endDate": "07/14/2009",
+      "comments": "Ademas de las tareas propias de control, seguimiento y gestión de la producción, estuve a cargo del área de Sistemas de la empresa y de la implementacion de un software ERP Capataz"
+    },
+    {
+      "id": 6,
+      "position": "Administrativo de producción - Ayudante en Sistemas",
+      "mode": {
+        "name": "Jornada Completa"
+      },
+      "company": "Orintrama Srl",
+      "location": "Costa Sacate, Cordoba, Argentina",
+      "startDate": "12/01/1997",
+      "endDate": "12/31/1998",
+      "comments": "Carga inicial, actualización y mantenimiento de estructuras en Software de Gestion Flexware, de Sistmas Bejerman"
+    },
+    {
+      "id": 7,
+      "position": "Nueva Experiencia 1",
+      "mode": {
+        "name": "Remota"
+      },
+      "company": "Mercado Libre",
+      "location": "Cordoba",
+      "startDate": "02/07/2022",
+      "endDate": "01/01/2024",
+      "comments": "nanana lider"
+    },
+    {
+      "id": 8,
+      "position": "Nueva Experiencia 2",
+      "mode": {
+        "name": "Remota"
+      },
+      "company": "Mercado Libre",
+      "location": "Buenos Aires",
+      "startDate": "02/02/2022",
+      "endDate": "01/01/2024",
+      "comments": "nanana lider"
+    },
+    {
+      "id": 9,
+      "position": "Nueva Experiencia 3",
+      "mode": {
+        "name": "Remota"
+      },
+      "company": "Mercado Libre",
+      "location": "Buenos Aires",
+      "startDate": "02/02/2022",
+      "endDate": "01/01/2024",
+      "comments": "nanana lider"
     }
-  ,
-  "experience":[{
-    "id": 1 ,
-    "position": "Encargado de planificacion de producción" ,      
-    "mode": "Jornada Completa" ,           
-    "company": "Oscar Scroza Equipos y Servicios Srl" ,       
-    "location": "Oncativo, Cordoba, Argentina" ,
-    "startMonth": "Dic" , 
-    "startYear": "2019" ,   
-    "endMonth": "",       
-    "endYear": "" ,
-    "timeElapsed": "7 años y 8 meses" ,
-    "comments":"Por necesidades propias de la empresa fui designado como encargado de la planificacion de la producción, puesto en que me desempeño actualmente"
-  },
-  {
-    "id": 2 ,
-    "position": "Encargado de Sistemas" ,      
-    "mode": "Jornada Completa" ,           
-    "company": "Oscar Scroza Equipos y Servicios Srl" ,       
-    "location": "Oncativo, Cordoba, Argentina" ,
-    "startMonth": "Jun" , 
-    "startYear": "2014" ,   
-    "endMonth": "Dic",       
-    "endYear": "2019" ,
-    "timeElapsed": "7 años y 8 meses" ,
-    "comments":"En los primeros dos años se implementó un sistema de gestión de producción de terceros (Capataz). A partir de marzo de 2017 se comenzó un proyecto de Software ERP para la producción en formato de aplicacion de escritorio (Windows Forms), programado en lenguaje C# bajo Visual Studio y utilizando SQL Server para las bases de datos"
-  },
-  {
-    "id": 3 ,
-    "position": "Administrativo de producción" ,      
-    "mode": "Jornada Completa" ,           
-    "company": "Georgalos SAICA" ,       
-    "location": "Río Segundo, Cordoba, Argentina" ,
-    "startMonth": "Jun" , 
-    "startYear": "2011" ,   
-    "endMonth": "Mar",       
-    "endYear": "2013" ,
-    "timeElapsed": "1 año y 9 meses" ,
-    "comments": ""
-  },
-  {
-    "id": 4 ,
-    "position": "Gerencia de producción" ,      
-    "mode": "Jornada Completa" ,           
-    "company": "Orintrama Srl" ,       
-    "location": "Costa Sacate, Cordoba, Argentina" ,
-    "startMonth": "Ene" , 
-    "startYear": "2010" ,   
-    "endMonth": "Abr",       
-    "endYear": "2011" ,
-    "timeElapsed": "1 año y 4 meses" ,
-    "comments": "En este último período fui llamado para ocupar el puesto de gerente de producción de la empresa"
-  },
-  {
-    "id": 5 ,
-    "position": "Administrativo de producción - Encargado de Sistemas" ,      
-    "mode": "Jornada Completa" ,           
-    "company": "Orintrama Srl" ,       
-    "location": "Costa Sacate, Cordoba, Argentina" ,
-    "startMonth": "Nov" , 
-    "startYear": "1999" ,   
-    "endMonth": "Jul",       
-    "endYear": "2009" ,
-    "timeElapsed": "9 años y 8 meses" ,
-    "comments": "Ademas de las tareas propias de control, seguimiento y gestión de la producción, estuve a cargo del área de Sistemas de la empresa y de la implementacion de un software ERP Capataz"
-  },
-  {
-    "id": 6 ,
-    "position": "Administrativo de producción - Ayudante en Sistemas" ,      
-    "mode": "Jornada Completa" ,           
-    "company": "Orintrama Srl" ,       
-    "location": "Costa Sacate, Cordoba, Argentina" ,
-    "startMonth": "Dic" , 
-    "startYear": "1997" ,   
-    "endMonth": "Dic",       
-    "endYear": "1998" ,
-    "timeElapsed": "1 año y 1 mes" ,
-    "comments": "Carga inicial, actualización y mantenimiento de estructuras en Software de Gestion Flexware, de Sistmas Bejerman"
-  }
- ]
-  ,
-  "education": [{
-    "id": 1 ,
-    "school": "Instituto Superior Pascal" ,
-    "title": "Técnico Superior en Desarrollo de Software" ,
-    "career": "Desarrollo de Software" ,
-    "startMonth": "Ene" ,
-    "startYear": "2021" ,   
-    "endMonth": "Dic" ,
-    "endYear": "2023" , 
-    "comments": "Actualmente me encuentro cursando el segundo año" ,
-    "img": "https://institutoisp.edu.ar/wp-content/uploads/2018/12/Isologo_ISP_transparente-01_H-1-e1545075048814.png"
-  },
-  {
-    "id": 2 ,
-    "school": "Universidad Tecnológica Nacional",
-    "title": "Ingeniería" ,
-    "career": "Ingeniería Industrial" ,
-    "startMonth": "Feb" ,
-    "startYear": "2003" ,   
-    "endMonth": "Nov" ,
-    "endYear": "2003" , 
-    "comments": "La extensión áulica de Río Segundo cerró e imposiblitado por la distancia y horarios de trabajo no pude continuar" ,
-    "img": "https://www.utn.edu.ar/images/logo-utn.png"
-  },
-  {
-    "id": 3 ,
-    "school": "Universidad Nacional de Córdoba" ,
-    "title": "Ingeniería" ,
-    "career": "Ingeniería Aeronáutica" ,
-    "startMonth": "Feb" ,
-    "startYear": "2000" ,   
-    "endMonth": "Nov" ,
-    "endYear": "2000" , 
-    "comments": "No pude continuar mis estudios por problemas económicos" ,
-    "img": "https://www.unc.edu.ar/sites/all/themes/unc/images/footer.svg"
-  },
-  {
-    "id": 4 ,
-    "school": "Universidad Nacional de Córdoba" ,
-    "title": "Licenciatura" ,
-    "career": "Licenciatura en Física" ,
-    "startMonth": "Feb" ,
-    "startYear": "1999" ,   
-    "endMonth": "jul" ,
-    "endYear": "1999" , 
-    "comments": "No pude continuar mis estudios por problemas económicos" ,
-    "img": "https://www.unc.edu.ar/sites/all/themes/unc/images/footer.svg"
-  }
   ],
-  "coursesCertified":[{
-    "id": 1 ,
-    "name": "Argentina Programa - #Yo Programo" ,                
-    "issuingAuthority": "Ministerio de Desarrollo Productivo - Cámara de la Industria Argentina del Software (CESSI) - Instituto Nacional de Tecnología Industrial (INTI)" ,  
-    "expeditionMonth": "May" ,
-    "expeditionYear": "2022" , 
-    "IdCredential": "" , 
-    "UrlCredential": "" , 
-    "comments": "En curso",
-    "img": "" 
-  },
-  {
-    "id": 2 ,
-    "name": "Argentina Programa - #Sé Programar" ,                
-    "issuingAuthority": "Ministerio de Desarrollo Productivo - Cámara de la Industria Argentina del Software (CESSI) - Subsecretaria de Economía del Conocimiento" , 
-    "expeditionMonth": "Oct" ,
-    "expeditionYear": "2021" , 
-    "IdCredential": "087d_4XE1NAzp6SN" , 
-    "UrlCredential": "https://mumuki.io/argentina-programa/certificates/verify/087d_4XE1NAzp6SN" , 
-    "comments": "Finalizado" ,
-    "img": "" 
-  },
-  {
-    "id": 3 ,
-    "name": "CCNA R&S: Routing and Switching Essentials" ,                
-    "issuingAuthority": "Cisco Networking Academy" ,  
-    "expeditionMonth": "Ago" ,
-    "expeditionYear": "2019" , 
-    "IdCredential": "" , 
-    "UrlCredential": "" , 
-    "comments": "" ,
-    "img": "https://media-exp1.licdn.com/dms/image/C4E0BAQFgocdTGHthDA/company-logo_100_100/0/1581351014172?e=1651104000&v=beta&t=wwXubTYXDn-hf02bKNxm7HOifiHpeHOUtmubrI_xTsE" 
-  },
-  {
-    "id": 4 ,
-    "name": "CCNA R&S: Introduction to Networks" ,                
-    "issuingAuthority": "Cisco Networking Academy" ,  
-    "expeditionMonth": "Ago" ,
-    "expeditionYear": "2019" , 
-    "IdCredential": "" , 
-    "UrlCredential": "" , 
-    "comments": "" ,
-    "img": "https://media-exp1.licdn.com/dms/image/C4E0BAQFgocdTGHthDA/company-logo_100_100/0/1581351014172?e=1651104000&v=beta&t=wwXubTYXDn-hf02bKNxm7HOifiHpeHOUtmubrI_xTsE" 
-  },
-  {
-    "id": 5 ,
-    "name": "Uso de Código de Barras" ,                
-    "issuingAuthority": "GS1 Argentina" ,  
-    "expeditionMonth": "Nov" ,
-    "expeditionYear": "2007" , 
-    "IdCredential": "" , 
-    "UrlCredential": "" , 
-    "comments": "" ,
-    "img": "" 
-  },
-  {
-    "id": 6 ,
-    "name": "Auditor de Calidad Iso9000/2000" ,                
-    "issuingAuthority": "IRAM" ,  
-    "expeditionMonth": "Jun" ,
-    "expeditionYear": "2006" , 
-    "IdCredential": "" , 
-    "UrlCredential": "" , 
-    "comments": "" ,
-    "img": "" 
-  },
-  {
-    "id": 7 ,
-    "name": "Técnico en Reparación y Mantenimiento de PC " ,                
-    "issuingAuthority": "PROMEL (Proyecto Mediterráneo Educativo Laboral) " ,  
-    "expeditionMonth": "Oct" ,
-    "expeditionYear": "2002" , 
-    "IdCredential": "" , 
-    "UrlCredential": "" , 
-    "comments": "" ,
-    "img": "" 
-  },
-  {
-    "id": 8 ,
-    "name": "Operador de PC" ,                
-    "issuingAuthority": "Instituto Jerónimo Luis de Cabrera" ,  
-    "expeditionMonth": "Nov" ,
-    "expeditionYear": "1996" , 
-    "IdCredential": "" , 
-    "UrlCredential": "" , 
-    "comments": "" ,
-    "img": "" 
-  }
+  "education": [
+    {
+      "id": 1,
+      "school": "Instituto Superior Pascal",
+      "title": "Técnico Superior en Desarrollo de Software",
+      "career": "Desarrollo de Software",
+      "startMonth": "Ene",
+      "startYear": "2021",
+      "endMonth": "Dic",
+      "endYear": "2023",
+      "comments": "Actualmente me encuentro cursando el segundo año",
+      "img": "https://institutoisp.edu.ar/wp-content/uploads/2018/12/Isologo_ISP_transparente-01_H-1-e1545075048814.png"
+    },
+    {
+      "id": 2,
+      "school": "Universidad Tecnológica Nacional",
+      "title": "Ingeniería",
+      "career": "Ingeniería Industrial",
+      "startMonth": "Feb",
+      "startYear": "2003",
+      "endMonth": "Nov",
+      "endYear": "2003",
+      "comments": "La extensión áulica de Río Segundo cerró e imposiblitado por la distancia y horarios de trabajo no pude continuar",
+      "img": "https://www.utn.edu.ar/images/logo-utn.png"
+    },
+    {
+      "id": 3,
+      "school": "Universidad Nacional de Córdoba",
+      "title": "Ingeniería",
+      "career": "Ingeniería Aeronáutica",
+      "startMonth": "Feb",
+      "startYear": "2000",
+      "endMonth": "Nov",
+      "endYear": "2000",
+      "comments": "No pude continuar mis estudios por problemas económicos",
+      "img": "https://www.unc.edu.ar/sites/all/themes/unc/images/footer.svg"
+    },
+    {
+      "id": 4,
+      "school": "Universidad Nacional de Córdoba",
+      "title": "Licenciatura",
+      "career": "Licenciatura en Física",
+      "startMonth": "Feb",
+      "startYear": "1999",
+      "endMonth": "jul",
+      "endYear": "1999",
+      "comments": "No pude continuar mis estudios por problemas económicos",
+      "img": "https://www.unc.edu.ar/sites/all/themes/unc/images/footer.svg"
+    }
   ],
-  "hardSkills": [{
-    "id": 1 ,
-    "name":"HTML" ,
-    "frontEnd": true ,
-    "backEnd": false ,
-    "level": "Intermedio" ,           
-    "comments": "" ,
-    "img": ""
-  },
-  {
-    "id": 2 ,
-    "name":"CSS" ,
-    "frontEnd": true ,
-    "backEnd": false ,
-    "level": "Intermedio" ,           
-    "comments": "" ,
-    "img": ""
-  },
-  {
-    "id": 3 ,
-    "name":"JavaScript" ,
-    "frontEnd": true ,
-    "backEnd": true ,
-    "level": "Intermedio" ,           
-    "comments": "" ,
-    "img?": ""
-  },
-  {
-    "id": 4 ,
-    "name":"TypeScrpit" ,
-    "frontEnd": true ,
-    "backEnd": false ,
-    "level": "Intermedio" ,           
-    "comments": "" ,
-    "img": ""
-  },
-  {
-    "id": 5 ,
-    "name":"Bootstrap" ,
-    "frontEnd": true ,
-    "backEnd": false ,
-    "level": "Intermedio" ,           
-    "comments": "" ,
-    "img": ""
-  },
-  {
-    "id": 6 ,
-    "name":"Angular" ,
-    "frontEnd": true ,
-    "backEnd": false ,
-    "level": "Intermedio" ,           
-    "comments": "" ,
-    "img": ""
-  },
-  {
-    "id": 7 ,
-    "name":"Java" ,
-    "frontEnd": false ,
-    "backEnd": true ,
-    "level": "Intermedio" ,           
-    "comments": "" ,
-    "img": ""
-  },
-  {
-    "id": 8 ,
-    "name":"C#" ,
-    "frontEnd": false ,
-    "backEnd": true ,
-    "level": "Intermedio" ,           
-    "comments": "" ,
-    "img": ""
-  },
-  {
-    "id": 9 ,
-    "name":"Ruby" ,
-    "frontEnd": false ,
-    "backEnd": true ,
-    "level": "Principiante" ,           
-    "comments": "" ,
-    "img": ""
-  },
-  {
-    "id": 10 ,
-    "name":"C++" ,
-    "frontEnd": false ,
-    "backEnd": true ,
-    "level": "Principiante" ,           
-    "comments": "" ,
-    "img": ""
-  },
-  {
-    "id": 11 ,
-    "name":"SQL" ,
-    "frontEnd": false ,
-    "backEnd": true ,
-    "level": "Intermedio" ,           
-    "comments": "" ,
-    "img": ""
-  },
-  {
-    "id": 12 ,
-    "name":"MySQL" ,
-    "frontEnd": false ,
-    "backEnd": true ,
-    "level": "Principiante" ,           
-    "comments": "" ,
-    "img": ""
-  },
-  {
-    "id": 13 ,
-    "name":"Inglés" ,
-    "frontEnd": false ,
-    "backEnd": false ,
-    "level": "Intermedio" ,           
-    "comments": "" ,
-    "img": ""
-  },
-  {
-    "id": 14 ,
-    "name":"Git" ,
-    "frontEnd": false ,
-    "backEnd": false ,
-    "level": "Principiante" ,           
-    "comments": "" ,
-    "img": ""
-  },
-  {
-    "id": 15 ,
-    "name":"Github" ,
-    "frontEnd": false ,
-    "backEnd": false ,
-    "level": "Principiante" ,           
-    "comments": "" ,
-    "img": ""
-  }
+  "coursesCertified": [
+    {
+      "id": 1,
+      "name": "Argentina Programa - #Yo Programo",
+      "issuingAuthority": "Ministerio de Desarrollo Productivo - Cámara de la Industria Argentina del Software (CESSI) - Instituto Nacional de Tecnología Industrial (INTI)",
+      "expeditionMonth": "May",
+      "expeditionYear": "2022",
+      "IdCredential": "",
+      "UrlCredential": "",
+      "comments": "En curso",
+      "img": ""
+    },
+    {
+      "id": 2,
+      "name": "Argentina Programa - #Sé Programar",
+      "issuingAuthority": "Ministerio de Desarrollo Productivo - Cámara de la Industria Argentina del Software (CESSI) - Subsecretaria de Economía del Conocimiento",
+      "expeditionMonth": "Oct",
+      "expeditionYear": "2021",
+      "IdCredential": "087d_4XE1NAzp6SN",
+      "UrlCredential": "https://mumuki.io/argentina-programa/certificates/verify/087d_4XE1NAzp6SN",
+      "comments": "Finalizado",
+      "img": ""
+    },
+    {
+      "id": 3,
+      "name": "CCNA R&S: Routing and Switching Essentials",
+      "issuingAuthority": "Cisco Networking Academy",
+      "expeditionMonth": "Ago",
+      "expeditionYear": "2019",
+      "IdCredential": "",
+      "UrlCredential": "",
+      "comments": "",
+      "img": "https://media-exp1.licdn.com/dms/image/C4E0BAQFgocdTGHthDA/company-logo_100_100/0/1581351014172?e=1651104000&v=beta&t=wwXubTYXDn-hf02bKNxm7HOifiHpeHOUtmubrI_xTsE"
+    },
+    {
+      "id": 4,
+      "name": "CCNA R&S: Introduction to Networks",
+      "issuingAuthority": "Cisco Networking Academy",
+      "expeditionMonth": "Ago",
+      "expeditionYear": "2019",
+      "IdCredential": "",
+      "UrlCredential": "",
+      "comments": "",
+      "img": "https://media-exp1.licdn.com/dms/image/C4E0BAQFgocdTGHthDA/company-logo_100_100/0/1581351014172?e=1651104000&v=beta&t=wwXubTYXDn-hf02bKNxm7HOifiHpeHOUtmubrI_xTsE"
+    },
+    {
+      "id": 5,
+      "name": "Uso de Código de Barras",
+      "issuingAuthority": "GS1 Argentina",
+      "expeditionMonth": "Nov",
+      "expeditionYear": "2007",
+      "IdCredential": "",
+      "UrlCredential": "",
+      "comments": "",
+      "img": ""
+    },
+    {
+      "id": 6,
+      "name": "Auditor de Calidad Iso9000/2000",
+      "issuingAuthority": "IRAM",
+      "expeditionMonth": "Jun",
+      "expeditionYear": "2006",
+      "IdCredential": "",
+      "UrlCredential": "",
+      "comments": "",
+      "img": ""
+    },
+    {
+      "id": 7,
+      "name": "Técnico en Reparación y Mantenimiento de PC ",
+      "issuingAuthority": "PROMEL (Proyecto Mediterráneo Educativo Laboral) ",
+      "expeditionMonth": "Oct",
+      "expeditionYear": "2002",
+      "IdCredential": "",
+      "UrlCredential": "",
+      "comments": "",
+      "img": ""
+    },
+    {
+      "id": 8,
+      "name": "Operador de PC",
+      "issuingAuthority": "Instituto Jerónimo Luis de Cabrera",
+      "expeditionMonth": "Nov",
+      "expeditionYear": "1996",
+      "IdCredential": "",
+      "UrlCredential": "",
+      "comments": "",
+      "img": ""
+    }
   ],
-  "softSkills": [{
-    "id": 1 ,
-    "name":"SCRUM" ,
-    "level": "Bueno" ,           
-    "comments": "Principiante"
-  },
-  {
-    "id": 2 ,
-    "name":"Trabajo en equipo" ,
-    "level": "Muy Bueno" ,           
-    "comments": ""
-  },
-  {
-    "id": 3 ,
-    "name":"Iniciativa" ,
-    "level": "Muy Bueno" ,            
-    "comments": ""
-  },
-  {
-    "id": 4 ,
-    "name":"Comunicación" ,
-    "level": "Bueno" ,           
-    "comments": ""
-  }
-]
+  "hardSkills": [
+    {
+      "id": 1,
+      "name": "HTML",
+      "frontEnd": true,
+      "backEnd": false,
+      "level": "Intermedio",
+      "comments": "",
+      "img": ""
+    },
+    {
+      "id": 2,
+      "name": "CSS",
+      "frontEnd": true,
+      "backEnd": false,
+      "level": "Intermedio",
+      "comments": "",
+      "img": ""
+    },
+    {
+      "id": 3,
+      "name": "JavaScript",
+      "frontEnd": true,
+      "backEnd": true,
+      "level": "Intermedio",
+      "comments": "",
+      "img?": ""
+    },
+    {
+      "id": 4,
+      "name": "TypeScrpit",
+      "frontEnd": true,
+      "backEnd": false,
+      "level": "Intermedio",
+      "comments": "",
+      "img": ""
+    },
+    {
+      "id": 5,
+      "name": "Bootstrap",
+      "frontEnd": true,
+      "backEnd": false,
+      "level": "Intermedio",
+      "comments": "",
+      "img": ""
+    },
+    {
+      "id": 6,
+      "name": "Angular",
+      "frontEnd": true,
+      "backEnd": false,
+      "level": "Intermedio",
+      "comments": "",
+      "img": ""
+    },
+    {
+      "id": 7,
+      "name": "Java",
+      "frontEnd": false,
+      "backEnd": true,
+      "level": "Intermedio",
+      "comments": "",
+      "img": ""
+    },
+    {
+      "id": 8,
+      "name": "C#",
+      "frontEnd": false,
+      "backEnd": true,
+      "level": "Intermedio",
+      "comments": "",
+      "img": ""
+    },
+    {
+      "id": 9,
+      "name": "Ruby",
+      "frontEnd": false,
+      "backEnd": true,
+      "level": "Principiante",
+      "comments": "",
+      "img": ""
+    },
+    {
+      "id": 10,
+      "name": "C++",
+      "frontEnd": false,
+      "backEnd": true,
+      "level": "Principiante",
+      "comments": "",
+      "img": ""
+    },
+    {
+      "id": 11,
+      "name": "SQL",
+      "frontEnd": false,
+      "backEnd": true,
+      "level": "Intermedio",
+      "comments": "",
+      "img": ""
+    },
+    {
+      "id": 12,
+      "name": "MySQL",
+      "frontEnd": false,
+      "backEnd": true,
+      "level": "Principiante",
+      "comments": "",
+      "img": ""
+    },
+    {
+      "id": 13,
+      "name": "Inglés",
+      "frontEnd": false,
+      "backEnd": false,
+      "level": "Intermedio",
+      "comments": "",
+      "img": ""
+    },
+    {
+      "id": 14,
+      "name": "Git",
+      "frontEnd": false,
+      "backEnd": false,
+      "level": "Principiante",
+      "comments": "",
+      "img": ""
+    },
+    {
+      "id": 15,
+      "name": "Github",
+      "frontEnd": false,
+      "backEnd": false,
+      "level": "Principiante",
+      "comments": "",
+      "img": ""
+    }
+  ],
+  "softSkills": [
+    {
+      "id": 1,
+      "name": "SCRUM",
+      "level": "Bueno",
+      "comments": "Principiante"
+    },
+    {
+      "id": 2,
+      "name": "Trabajo en equipo",
+      "level": "Muy Bueno",
+      "comments": ""
+    },
+    {
+      "id": 3,
+      "name": "Iniciativa",
+      "level": "Muy Bueno",
+      "comments": ""
+    },
+    {
+      "id": 4,
+      "name": "Comunicación",
+      "level": "Bueno",
+      "comments": ""
+    }
+  ]
 }
