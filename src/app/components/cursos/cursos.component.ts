@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CoursesCertified } from 'src/app/interfaces/interfaces';
+import { Course } from 'src/app/interfaces/interfaces';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 
 @Component({
@@ -9,12 +9,26 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class CursosComponent implements OnInit {
 
-  courses: CoursesCertified[] = [];
+  courses: Course[] = [];
 
   constructor(private portfolioService: PortfolioService) { }
 
   ngOnInit(): void {
-    this.portfolioService.getCursos().subscribe(data => {this.courses = data;})
+    this.portfolioService.getCourses().subscribe(data => {this.courses = data, 
+    this.courses = this.courses.sort( function (a, b){
+      if(Date.parse(a.expeditionDate) > Date.parse(b.expeditionDate))
+      return -1;
+      if(Date.parse(a.expeditionDate) < Date.parse(b.expeditionDate))
+      return 1;
+      return 0;
+    } )
+    })
+  }
+
+  fecha = new Date();
+
+  fechaAnumero( fechaString: String) {
+  
   }
 
 }

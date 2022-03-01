@@ -16,6 +16,14 @@ export class ExperienciaComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.portfolioService.getExperience().subscribe(data => {this.experiences = data;});
+    this.portfolioService.getExperience().subscribe(data => {this.experiences = data,
+      this.experiences = this.experiences.sort( function (a, b){
+        if(Date.parse(a.startDate) > Date.parse(b.startDate))
+        return -1;
+        if(Date.parse(a.startDate) < Date.parse(b.startDate))
+        return 1;
+        return 0;
+      } )
+    });
   }
 }

@@ -18,10 +18,10 @@ import { MenuComponent } from './shared/menu/menu.component';
 import { AddexperienceComponent } from './components/forms/addexperience/addexperience.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
 import localeEsp from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
 import { AddeducationComponent } from './components/forms/addeducation/addeducation.component';
+import { AddcourseComponent } from './components/forms/addcourse/addcourse.component';
 registerLocaleData(localeEsp);
 
 @NgModule({
@@ -37,7 +37,8 @@ registerLocaleData(localeEsp);
     ContactoComponent,
     MenuComponent,
     AddexperienceComponent,
-    AddeducationComponent
+    AddeducationComponent, 
+    AddcourseComponent
   ],
   imports: [
     BrowserModule,

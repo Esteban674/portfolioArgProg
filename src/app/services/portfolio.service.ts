@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { CoursesCertified, Education, Experience, User } from '../interfaces/interfaces';
+import { Course, Education, Experience, User } from '../interfaces/interfaces';
 import { environment } from 'src/environments/environment';
 
 const httpOptions = {
@@ -23,7 +23,7 @@ export class PortfolioService {
   return this.http.get<User>(`${this.apiUrlL}/user`);
  }
 
- //EXPERIENCIAS
+ ////////////////// EXPERIENCIAS ////////////////////
  getExperience(): Observable<Experience[]>{
   return this.http.get<Experience[]>(`${this.apiUrlL}/experiencia`);
  }
@@ -44,7 +44,7 @@ export class PortfolioService {
   return this.http.delete<Experience>(`${this.apiUrlL}/experiencia/eliminar/${id}`);
  }
 
- //EDUCACION
+ ////////////////// EDUCACION ///////////////////////
  getEducation(): Observable<Education[]>{
   return this.http.get<Education[]>(`${this.apiUrlL}/educacion`);
  }
@@ -65,9 +65,26 @@ deleteEducation(id: number): Observable<Education>{
  return this.http.delete<Education>(`${this.apiUrlL}/educacion/eliminar/${id}`);
 }
 
-//CURSOS
- getCursos(): Observable<CoursesCertified[]>{
-   return this.http.get<CoursesCertified[]>(`${this.apiUrlL}/coursesCertified`);
+//////////////////// CURSOS ////////////////////////
+ getCourses(): Observable<Course[]>{
+   return this.http.get<Course[]>(`${this.apiUrlL}/cursos`);
  }
+
+ getCoursePorId(id: string): Observable<Course>{
+  return this.http.get<Course>(`${this.apiUrlL}/cursos/${id}`);
+ }
+
+ addCourse(course:Course): Observable<Course>{
+  return this.http.post<Course>(`${this.apiUrlL}/cursos/agregar`, course)
+}
+
+updateCourse(course:Course): Observable<Course>{
+  return this.http.put<Course>(`${this.apiUrlL}/cursos/editar/${course.id}`, course)
+}
+
+deleteCourse(id: number): Observable<Course>{
+ return this.http.delete<Course>(`${this.apiUrlL}/cursos/eliminar/${id}`);
+}
+
 
 }

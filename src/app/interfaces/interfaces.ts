@@ -37,13 +37,13 @@ export interface Education{
     img?:string;
 }
 
-export interface CoursesCertified{
+export interface Course{
+    id?:number;
     name:string;                //Nombre del curso o certificacion
     issuingAuthority:string;    //Empresa o autoridad emisora
-    expeditionMonth:string;
-    expeditionYear:number;
-    IdCredential:string;
-    UrlCredential:string;
+    expeditionDate:string;
+    credentialId:string;
+    credentialUrl:string;
     comments:string;
     img?:string;
 }

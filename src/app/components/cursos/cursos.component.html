@@ -1,6 +1,16 @@
 <div>
-    <div class="p-card page-border p-4">
+  <div class="p-card page-border p-4">
+    <div class="row">
+      <div class="col d-sm-inline-flex">
       <h2>Cursos y Certificaciones</h2> 
+      <button pButton type="button" 
+      class="p-button-rounded float-end ms-3" 
+      icon="pi pi-plus" iconPos="left" 
+      title="Agregar"
+      [routerLink]="'/cursos/agregar'"
+      ></button>
+      </div>
+    </div>
       <hr>
       <ul>
           <li *ngFor="let course of courses">
@@ -9,44 +19,26 @@
               <h4>{{course.name}}</h4>
               <span>{{course.issuingAuthority}}</span><br>
               <span>Fecha de expedición: </span>
-              <span><time>{{course.expeditionMonth}}</time></span>
-              <span><time> {{course.expeditionYear}}</time></span><br>
-              <span *ngIf="course.IdCredential !== ''">IdCredential: {{course.IdCredential}}<br></span>
-              <span *ngIf="course.UrlCredential !== ''">UrlCredential: <a href="{{course.UrlCredential}}" target="_blank">{{course.UrlCredential}}</a><br></span>
+              <span><time>{{course.expeditionDate}}</time></span>
+              <br>
+              <span *ngIf="course.credentialId !== ''">IdCredential: {{course.credentialId}}<br></span>
+              <span *ngIf="course.credentialUrl !== ''">UrlCredential: <a href="https://{{course.credentialUrl}}" target="_blank">{{course.credentialUrl}}</a><br></span>
               <span *ngIf="course.comments !== ''">Comentarios: {{course.comments}}</span>
             </div>
             <div class="col-1">
-              <!-- Button trigger modal -->
-              <button pButton type="button" 
-                      class="p-button-rounded float-end" 
-                      icon="pi pi-pencil" iconPos="left" 
-                      data-bs-toggle="modal" 
-                      data-bs-target="#editarCursos"
-                      title="Editar"
-                      ></button>
-            </div>  
-          </div>   
-          </li>
-      </ul>  
-    </div>
+              <button pButton pRipple icon="pi pi-pencil" 
+              class="p-button-rounded p-button-success mt-1 ml-3"
+              [routerLink]="['/cursos/editar', course.id]"
+              title="Editar"
+              ></button>
+              <button pButton pRipple icon="pi pi-trash" 
+              class="p-button-rounded p-button-warning mt-3 ml-3"
+              [routerLink]="['/cursos/eliminar', course.id]"
+              title="Eliminar"
+              ></button>
+    </div>  
+  </div>   
+  </li>
+  </ul>  
   </div>
-
-
-  <!-- Modal -->
-<div class="modal fade" id="editarCursos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content p-card">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Editar Cursos</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
-    </div>
   </div>
-</div>

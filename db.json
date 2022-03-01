@@ -170,7 +170,7 @@
       "img": "https://www.unc.edu.ar/sites/all/themes/unc/images/footer.svg"
     }
   ],
-  "coursesCertified": [
+  "courses": [
     {
       "id": 1,
       "name": "Argentina Programa - #Yo Programo",

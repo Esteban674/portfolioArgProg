@@ -14,7 +14,15 @@ export class EducacionComponent implements OnInit {
   constructor(private portfolioService: PortfolioService) { }
 
   ngOnInit(): void {
-    this.portfolioService.getEducation().subscribe(data => {this.educations = data;});
+    this.portfolioService.getEducation().subscribe(data => {this.educations = data,
+      this.educations = this.educations.sort( function (a, b){
+        if(Date.parse(a.startDate) > Date.parse(b.startDate))
+        return -1;
+        if(Date.parse(a.startDate) < Date.parse(b.startDate))
+        return 1;
+        return 0;
+      } )
+    });
   }
 
 }
