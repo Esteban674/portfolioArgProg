@@ -6,6 +6,8 @@ import { PortfolioRoutingModule } from './portfolio-routing.module';
 
 @NgModule({
   declarations: [
+  
+   
   ],
   imports: [
     CommonModule,

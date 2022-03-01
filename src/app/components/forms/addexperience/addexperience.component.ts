@@ -35,7 +35,7 @@ export class AddexperienceComponent implements OnInit {
 
   experiencia: Experience = {
     position: '',   
-    mode: {name: ''},     
+    mode: {id: 1,name: ''},     
     company: '' ,     
     location:  '', 
     startDate: '', 
@@ -52,9 +52,12 @@ export class AddexperienceComponent implements OnInit {
               ) {
 
     this.modalidades = [
-      {name: 'Media Jornada'},
-      {name: 'Jornada Completa'},
-      {name: 'Remota'}
+      { id: 1,
+        name: 'Media Jornada'},
+      { id: 2,
+        name: 'Jornada Completa'},
+      { id: 3,
+        name: 'Remota'}
     ];
 
 
@@ -129,7 +132,7 @@ export class AddexperienceComponent implements OnInit {
 
  borrar() {
   this.confirmationService.confirm({
-      message: 'Esta seguro que desea eiliminar?',
+      message: 'Esta seguro que desea eliminar?',
       header: 'Confirmación',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {

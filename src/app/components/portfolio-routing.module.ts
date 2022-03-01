@@ -7,6 +7,7 @@ import { CursosComponent } from './cursos/cursos.component';
 import { EducacionComponent } from './educacion/educacion.component';
 import { ExperienciaComponent } from './experiencia/experiencia.component';
 import { HabilidadesComponent } from './habilidades/habilidades.component';
+import { AddeducationComponent } from './forms/addeducation/addeducation.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,9 @@ const routes: Routes = [
       { path: 'experiencia/editar/:id', component: AddexperienceComponent},
       { path: 'experiencia/eliminar/:id', component: AddexperienceComponent},
       { path: 'educacion', component: EducacionComponent},
+      { path: 'educacion/agregar', component: AddeducationComponent},
+      { path: 'educacion/editar/:id', component: AddeducationComponent},
+      { path: 'educacion/eliminar/:id', component: AddeducationComponent},
       { path: 'cursos', component: CursosComponent},
       { path: 'habilidades', component: HabilidadesComponent},
       { path: 'contacto', component: ContactoComponent},

@@ -1,0 +1,77 @@
+<h3>{{(educacion.id)? ((elimina)? 'Borrar': 'Editar') : 'Agregar'}} Educación</h3>
+<hr>
+<form (ngSubmit)="confirm()" autocomplete="off" [formGroup]="addEducationForm">
+   <div class="p-fluid grid pt-3">
+    <div class="field col-12 md:col-12">
+        <span class="p-float-label p-input-icon-left">
+            <i class="pi pi-building"></i>
+            <input type="text" 
+                   pInputText 
+                   formControlName="school"
+                   id="school">  
+            <label for="school">Institución</label>
+        </span>
+    </div>          
+    <div class="field col-12 md:col-12">
+        <span class="p-float-label p-input-icon-left">
+            <i class="bi bi-award-fill"></i>
+            <input type="text" 
+                   pInputText 
+                   formControlName="title"
+                   id="title">  
+            <label for="title">Título</label>
+        </span>
+    </div>
+
+    <div class="field col-12 md:col-12">
+        <span class="p-float-label p-input-icon-left">
+            <i class="pi pi-briefcase"></i>
+            <input type="text" 
+                   pInputText 
+                   formControlName="career"
+                   id="career">  
+            <label for="career">Disciplina Académica</label>
+        </span>
+    </div>
+
+    <div class="field col-12 md:col-12">
+        <span class="p-float-label">
+            <p-calendar formControlName="startDate"  id="startDate" dataType="string"></p-calendar> 
+            <label for="startDate">Fecha de inicio</label>
+        </span>
+    </div>
+    <div class="field col-12 md:col-12">
+        <span class="p-float-label">
+            <p-calendar formControlName="endDate" id="endDate" dataType="string"></p-calendar> 
+            <label for="endDate">Fecha de finalización</label>
+        </span>
+    </div>
+
+    <div class="field col-12 md:col-12">
+        <span class="p-float-label">
+            <textarea pInputTextarea formControlName="comments"></textarea>
+            <label for="comments">Comentarios</label>
+        </span>
+    </div>
+
+</div>
+<div *ngIf="!elimina">
+    <button pButton type="submit" label="Confirmar"  icon="pi pi-check" class="float-end" [disabled]="addEducationForm.invalid"></button>
+</div>
+<div *ngIf="elimina">
+    <button pButton type="button" label="Borrar"  icon="pi pi-times" class="float-end p-button-warning" (click)="borrar()"></button>
+</div>
+
+<button pButton type="button" label="Cancelar" class="p-button-secondary float-end me-2" [routerLink]="'/educacion'"></button>
+<p-confirmDialog #cd [style]="{width: '50vw'}">
+    <ng-template pTemplate="header">
+        <h5>Se {{(educacion.id)? ((elimina)? 'eliminará' : 'actualizará') : 'agregará'}} la educación</h5>
+    </ng-template>
+    <ng-template pTemplate="footer">
+        <button type="button" pButton class="p-button-danger" icon="pi pi-times" label="No" (click)="cd.reject()"></button>
+        <button type="button" pButton class="p-button-success" icon="pi pi-check" label="Si" (click)="cd.accept()"></button>
+    </ng-template>
+</p-confirmDialog>
+</form>
+
+

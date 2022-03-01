@@ -22,17 +22,17 @@ export interface Experience{
 }
 
 export interface Mode {
+    id:number;
     name:string;
 }
 
 export interface Education{
+    id?:number;
     school:string;      //Institucion
     title:string;       //Titulo
     career:string;      //Disciplina Academica
-    startMonth: string; 
-    startYear:number;   
-    endMonth:string;
-    endYear:number;
+    startDate: string; //  
+    endDate?: string;       //Cuando esten vacias reemplazar por la palabra "Actualidad"
     comments:string;
     img?:string;
 }

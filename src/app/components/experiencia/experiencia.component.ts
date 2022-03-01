@@ -12,8 +12,7 @@ export class ExperienciaComponent implements OnInit {
   experiences: Experience[] = [];
 
 
-  constructor(private portfolioService: PortfolioService,
-              ) { }
+  constructor(private portfolioService: PortfolioService,) { }
 
   ngOnInit(): void {
 
