@@ -44,6 +44,17 @@ export class PortfolioService {
   return this.http.delete<Experience>(`${this.apiUrlL}/experiencia/eliminar/${id}`);
  }
 
+ uploadImgExperience(archivo: File, id: any): Observable<HttpEvent<{}>>{
+  let formData = new FormData();
+  formData.append("archivo", archivo);
+  formData.append("id", id);
+
+  const req = new HttpRequest('POST', `${this.apiUrlL}/experiencia/upload`, formData, {reportProgress: true});
+
+  return this.http.request(req);
+}
+
+
  ////////////////// EDUCACION ///////////////////////
  getEducation(): Observable<Education[]>{
   return this.http.get<Education[]>(`${this.apiUrlL}/educacion`);
@@ -63,6 +74,16 @@ updateEducation(education:Education): Observable<Education>{
 
 deleteEducation(id: number): Observable<Education>{
  return this.http.delete<Education>(`${this.apiUrlL}/educacion/eliminar/${id}`);
+}
+
+uploadImgEducation(archivo: File, id: any): Observable<HttpEvent<{}>>{
+  let formData = new FormData();
+  formData.append("archivo", archivo);
+  formData.append("id", id);
+
+  const req = new HttpRequest('POST', `${this.apiUrlL}/educacion/upload`, formData, {reportProgress: true});
+
+  return this.http.request(req);
 }
 
 //////////////////// CURSOS ////////////////////////

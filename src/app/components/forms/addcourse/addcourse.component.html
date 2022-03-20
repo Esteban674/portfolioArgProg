@@ -8,6 +8,10 @@
                 <input type="text" pInputText formControlName="name" id="name">
                 <label for="name">Nombre del curso o certificación</label>
             </span>
+            <span 
+            class="form-text text-danger"
+            *ngIf="campoEsValido('name')">
+            El nombre es requerido</span>    
         </div>
         <div class="field col-12 md:col-12">
             <span class="p-float-label p-input-icon-left">
@@ -15,6 +19,10 @@
                 <input type="text" pInputText formControlName="issuingAuthority" id="issuingAuthority">
                 <label for="issuingAuthority">Institución o autoridad emisora</label>
             </span>
+            <span 
+            class="form-text text-danger"
+            *ngIf="campoEsValido('issuingAuthority')"   >
+            Institución o autoridad emisora es requerido</span>    
         </div>
 
         <div class="field col-12 md:col-12">
@@ -22,6 +30,10 @@
                 <p-calendar formControlName="expeditionDate" id="expeditionDate" dataType="string"></p-calendar>
                 <label for="expeditionDate">Fecha de expedición</label>
             </span>
+            <span 
+            class="form-text text-danger"
+            *ngIf="campoEsValido('expeditionDate')"   >
+            La fecha de expedición es requerida</span>    
         </div>
 
         <div class="field col-12 md:col-12">
@@ -51,7 +63,7 @@
         <div *ngIf="edita" class="field col-12 md:col-12">
             <div class="row" style="align-items: center;">
                 <div class="col-10">
-                    <input formControlName="img" (change)="seleccionarFoto($event)" type="file" class="form-control p-inputtext"
+                    <input (change)="seleccionarFoto($event)" type="file" class="form-control p-inputtext"
                         id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
                 </div>
                 <div class="col-2">

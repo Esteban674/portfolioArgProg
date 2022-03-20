@@ -1,6 +1,6 @@
 <h3>{{(educacion.id)? ((elimina)? 'Borrar': 'Editar') : 'Agregar'}} Educación</h3>
 <hr>
-<form (ngSubmit)="confirm()" autocomplete="off" [formGroup]="addEducationForm">
+<form (ngSubmit)="confirm()" autocomplete="off" [formGroup]="addEducationForm" enctype="multipart/form-data">
    <div class="p-fluid grid pt-3">
     <div class="field col-12 md:col-12">
         <span class="p-float-label p-input-icon-left">
@@ -11,6 +11,10 @@
                    id="school">  
             <label for="school">Institución</label>
         </span>
+        <span 
+            class="form-text text-danger"
+            *ngIf="campoEsValido('school')">
+            El nombre de la Institución es requerido</span> 
     </div>          
     <div class="field col-12 md:col-12">
         <span class="p-float-label p-input-icon-left">
@@ -21,6 +25,10 @@
                    id="title">  
             <label for="title">Título</label>
         </span>
+        <span 
+            class="form-text text-danger"
+            *ngIf="campoEsValido('title')">
+            El título es requerido</span> 
     </div>
 
     <div class="field col-12 md:col-12">
@@ -32,6 +40,10 @@
                    id="career">  
             <label for="career">Disciplina Académica</label>
         </span>
+        <span 
+        class="form-text text-danger"
+        *ngIf="campoEsValido('career')">
+        La disciplina académica es requerida</span> 
     </div>
 
     <div class="field col-12 md:col-12">
@@ -39,6 +51,10 @@
             <p-calendar formControlName="startDate"  id="startDate" dataType="string"></p-calendar> 
             <label for="startDate">Fecha de inicio</label>
         </span>
+        <span 
+        class="form-text text-danger"
+        *ngIf="campoEsValido('startDate')">
+        La fecha de inicio es requerida</span> 
     </div>
     <div class="field col-12 md:col-12">
         <span class="p-float-label">
@@ -53,6 +69,37 @@
             <label for="comments">Comentarios</label>
         </span>
     </div>
+
+    <div *ngIf="edita" class="field col-12 md:col-12">
+        <div class="row" style="align-items: center;">
+            <div class="col-10">
+                <input (change)="seleccionarFoto($event)" type="file" class="form-control p-inputtext"
+                    id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+            </div>
+            <div class="col-2">
+                <button pButton type="button" (click)="subirFoto()" [disabled]="!fotoSeleccionada"
+                    class="p-button-help" id="inputGroupFileAddon04" icon="pi pi-check" iconPos="left"
+                    label="Subir"></button>
+            </div>
+            <span>
+                <div *ngIf="progreso > 0" class="progress" style="height: 25px;">
+                <div class="progress-bar progress-bar-striped progress-bar" role="progressbar"
+                    attr.aria-valuenow="{{progreso}}" aria-valuemin="0" aria-valuemax="100"
+                    [ngStyle]="{width: progreso +'%'}">
+                    {{progreso}}%
+                </div>
+            </div> 
+            </span>
+            <span>
+                <ul *ngIf="fotoSeleccionada">
+                    <li>Nueva imagen: {{fotoSeleccionada.name}} - {{fotoSeleccionada.size}} bytes</li>
+                </ul>
+                <span *ngIf="educacion?.img"><img src="http://localhost:8080/uploads/img/{{educacion.img}}"
+                        class="imagen-card"> {{educacion.img}}</span>
+            </span>            
+        </div>
+    </div>
+
 
 </div>
 <div *ngIf="!elimina">

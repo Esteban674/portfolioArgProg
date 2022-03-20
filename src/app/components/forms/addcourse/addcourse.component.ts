@@ -14,7 +14,8 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
   providers: [ConfirmationService],
 })
 export class AddcourseComponent implements OnInit {
-  addCourseForm: FormGroup = this.fb.group({
+  
+   addCourseForm: FormGroup = this.fb.group({
     id: [, []],
     name: ['', [Validators.required]],
     issuingAuthority: ['', [Validators.required]],
@@ -29,7 +30,6 @@ export class AddcourseComponent implements OnInit {
 
   elimina: boolean = false;
   edita: boolean = false;
-  imagenSeleccionada!: File;
   fotoSeleccionada!: File;
   progreso: number = 0;
 
@@ -86,6 +86,11 @@ export class AddcourseComponent implements OnInit {
         });
     }
   }
+
+  campoEsValido( campo: string){
+    return this.addCourseForm.controls[campo].errors && this.addCourseForm.controls[campo].touched
+  }
+
 
   confirm() {
     this.confirmationService.confirm({

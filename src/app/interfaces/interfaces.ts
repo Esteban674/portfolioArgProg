@@ -18,7 +18,8 @@ export interface Experience{
     location:string;        //Direccion Ej: Pilar, Cordoba, Argentina 
     startDate: string; //  
     endDate?: string;       //Cuando esten vacias reemplazar por la palabra "Actualidad"
-    comments:string;  
+    comments:string; 
+    img?:string; 
 }
 
 export interface Mode {

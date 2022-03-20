@@ -14,8 +14,14 @@
     <hr>
     <ul>
         <li *ngFor="let experience of experiences; let i = index">
-          <div class="grid page-border page-card mt-3 me-3">
-          <div class="col-11">
+          <div class="grid page-border page-card" style="flex-wrap: nowrap;">
+            <div class="col-auto mt-1 pl-1 pe-1">
+              <span *ngIf="experience.img"><img src="http://localhost:8080/uploads/img/{{experience.img}}" 
+               class="imagen-card" style="cursor: pointer;" [routerLink]="['/experiencia/editar', experience.id]"></span>
+               <span *ngIf="!experience.img"><img src="http://localhost:8080/images/image_add_fill_icon.png" 
+                 class="imagen-card" style="cursor: pointer;" [routerLink]="['/experiencia/editar', experience.id]"></span>
+             </div>
+            <div class="col-sm-8 col-lg-10 p-2">
             <h4>{{experience.position}}</h4>
             <span><b>Modalidad:</b> {{experience.mode.name}}</span><br>
             <span><b>Empresa:</b> {{experience.company}}</span><br>
@@ -28,19 +34,22 @@
             <br>
             <p *ngIf="experience.comments !== ''"><b>Comentarios:</b> {{experience.comments}}</p>
           </div>
-          <div class="col-1">
-
-                    <button pButton pRipple icon="pi pi-pencil" 
-                    class="p-button-rounded p-button-success mt-1 ml-3"
-                    [routerLink]="['/experiencia/editar', experience.id]"
-                    title="Editar"
-                    ></button>
-                    <button pButton pRipple icon="pi pi-trash" 
-                    class="p-button-rounded p-button-warning mt-3 ml-3"
-                    [routerLink]="['/experiencia/eliminar', experience.id]"
-                    title="Eliminar"
-                    ></button>
-          </div>  
+          <div class="col-auto d-block pt-2">
+            <div>
+              <button pButton pRipple icon="pi pi-pencil" 
+            class="p-button-rounded p-button-success "
+            [routerLink]="['/experiencia/editar', experience.id]"
+            title="Editar"
+            ></button>
+            </div>
+            <div>
+               <button pButton pRipple icon="pi pi-trash" 
+            class="p-button-rounded p-button-warning mt-2"
+            [routerLink]="['/experiencia/eliminar', experience.id]"
+            title="Eliminar"
+            ></button>
+            </div>          
+          </div>   
         </div>   
         </li>
     </ul>  

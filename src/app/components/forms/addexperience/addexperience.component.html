@@ -1,7 +1,6 @@
-
 <h3>{{(experiencia.id)? ((elimina)? 'Borrar': 'Editar') : 'Agregar'}} Experiencia</h3>
 <hr>
-<form (ngSubmit)="confirm()" autocomplete="off" [formGroup]="addExperienceForm">
+<form (ngSubmit)="confirm()" autocomplete="off" [formGroup]="addExperienceForm" enctype="multipart/form-data">
    <div class="p-fluid grid pt-3">
     <div class="field col-12 md:col-12">
         <span class="p-float-label p-input-icon-left">
@@ -12,6 +11,10 @@
                    id="position">  
             <label for="position">Posición</label>
         </span>
+        <span 
+            class="form-text text-danger"
+            *ngIf="campoEsValido('position')">
+            La posición es requerida</span>    
     </div>
    
     <div class="field col-12 md:col-12">
@@ -19,6 +22,10 @@
             <p-dropdown [options]="modalidades" formControlName="mode" optionLabel="name" id="modalidad" placeholder="Modalidad"></p-dropdown>
             <label for="modalidad">Modalidad</label>
         </span>
+        <span 
+        class="form-text text-danger"
+        *ngIf="campoEsValido('mode')">
+        La modalidad es requerida</span>    
     </div>
             
     <div class="field col-12 md:col-12">
@@ -30,6 +37,10 @@
                    id="company">  
             <label for="company">Empresa o Compañía</label>
         </span>
+        <span 
+        class="form-text text-danger"
+        *ngIf="campoEsValido('company')">
+        El nombre de la empresa o compañía es requerido</span> 
     </div>
 
     <div class="field col-12 md:col-12">
@@ -41,6 +52,10 @@
                    id="location">  
             <label for="location">Ubicación</label>
         </span>
+        <span 
+        class="form-text text-danger"
+        *ngIf="campoEsValido('location')">
+        La ubicación es requerida</span> 
     </div>
 
     <div class="field col-12 md:col-12">
@@ -48,6 +63,10 @@
             <p-calendar formControlName="startDate"  id="startDate" dataType="string"></p-calendar> 
             <label for="startDate">Fecha de inicio</label>
         </span>
+        <span 
+        class="form-text text-danger"
+        *ngIf="campoEsValido('startDate')">
+        La fecha de inicio es requerida</span> 
     </div>
     <div class="field col-12 md:col-12">
         <span class="p-float-label">
@@ -62,6 +81,36 @@
             <label for="comments">Comentarios</label>
         </span>
     </div>
+    <div *ngIf="edita" class="field col-12 md:col-12">
+        <div class="row" style="align-items: center;">
+            <div class="col-10">
+                <input (change)="seleccionarFoto($event)" type="file" class="form-control p-inputtext"
+                    id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+            </div>
+            <div class="col-2">
+                <button pButton type="button" (click)="subirFoto()" [disabled]="!fotoSeleccionada"
+                    class="p-button-help" id="inputGroupFileAddon04" icon="pi pi-check" iconPos="left"
+                    label="Subir"></button>
+            </div>
+            <span>
+                <div *ngIf="progreso > 0" class="progress" style="height: 25px;">
+                <div class="progress-bar progress-bar-striped progress-bar" role="progressbar"
+                    attr.aria-valuenow="{{progreso}}" aria-valuemin="0" aria-valuemax="100"
+                    [ngStyle]="{width: progreso +'%'}">
+                    {{progreso}}%
+                </div>
+            </div> 
+            </span>
+            <span>
+                <ul *ngIf="fotoSeleccionada">
+                    <li>Nueva imagen: {{fotoSeleccionada.name}} - {{fotoSeleccionada.size}} bytes</li>
+                </ul>
+                <span *ngIf="experiencia?.img"><img src="http://localhost:8080/uploads/img/{{experiencia.img}}"
+                        class="imagen-card"> {{experiencia.img}}</span>
+            </span>            
+        </div>
+    </div>
+
 
 </div>
 <div *ngIf="!elimina">
