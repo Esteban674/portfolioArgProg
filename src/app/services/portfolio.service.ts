@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient, HttpEvent, HttpHeaders, HttpRequest} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Course, Education, Experience, User } from '../interfaces/interfaces';
 import { environment } from 'src/environments/environment';
@@ -28,7 +28,7 @@ export class PortfolioService {
   return this.http.get<Experience[]>(`${this.apiUrlL}/experiencia`);
  }
 
- getExperiencePorId(id: string): Observable<Experience>{
+ getExperiencePorId(id: number): Observable<Experience>{
   return this.http.get<Experience>(`${this.apiUrlL}/experiencia/${id}`);
  }
  
@@ -49,7 +49,7 @@ export class PortfolioService {
   return this.http.get<Education[]>(`${this.apiUrlL}/educacion`);
  }
 
- getEducationPorId(id: string): Observable<Education>{
+ getEducationPorId(id: number): Observable<Education>{
   return this.http.get<Education>(`${this.apiUrlL}/educacion/${id}`);
  }
 
@@ -70,7 +70,7 @@ deleteEducation(id: number): Observable<Education>{
    return this.http.get<Course[]>(`${this.apiUrlL}/cursos`);
  }
 
- getCoursePorId(id: string): Observable<Course>{
+ getCoursePorId(id: number): Observable<Course>{
   return this.http.get<Course>(`${this.apiUrlL}/cursos/${id}`);
  }
 
@@ -85,6 +85,17 @@ updateCourse(course:Course): Observable<Course>{
 deleteCourse(id: number): Observable<Course>{
  return this.http.delete<Course>(`${this.apiUrlL}/cursos/eliminar/${id}`);
 }
+
+uploadImgCourse(archivo: File, id: any): Observable<HttpEvent<{}>>{
+  let formData = new FormData();
+  formData.append("archivo", archivo);
+  formData.append("id", id);
+
+  const req = new HttpRequest('POST', `${this.apiUrlL}/cursos/upload`, formData, {reportProgress: true});
+
+  return this.http.request(req);
+}
+
 
 
 }

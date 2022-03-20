@@ -14,8 +14,12 @@
       <hr>
       <ul>
           <li *ngFor="let course of courses">
-            <div class="grid page-border page-card mt-3 me-3">
-              <div class="col-11">
+            <div class="grid page-border page-card"  style="flex-wrap: nowrap;">
+              <div class="col-auto mt-1 pl-1 pe-1">
+               <span *ngIf="course.img"><img src="http://localhost:8080/uploads/img/{{course.img}}" 
+                class="imagen-card" style="cursor: pointer;" [routerLink]="['/cursos/editar', course.id]"></span>
+              </div>
+              <div class="col-sm-8 col-lg-10 p-2">
               <h4>{{course.name}}</h4>
               <span>{{course.issuingAuthority}}</span><br>
               <span>Fecha de expedición: </span>
@@ -25,19 +29,23 @@
               <span *ngIf="course.credentialUrl !== ''">UrlCredential: <a href="https://{{course.credentialUrl}}" target="_blank">{{course.credentialUrl}}</a><br></span>
               <span *ngIf="course.comments !== ''">Comentarios: {{course.comments}}</span>
             </div>
-            <div class="col-1">
-              <button pButton pRipple icon="pi pi-pencil" 
-              class="p-button-rounded p-button-success mt-1 ml-3"
+            <div class="col-auto d-block pt-2">
+              <div>
+                <button pButton pRipple icon="pi pi-pencil" 
+              class="p-button-rounded p-button-success "
               [routerLink]="['/cursos/editar', course.id]"
               title="Editar"
               ></button>
-              <button pButton pRipple icon="pi pi-trash" 
-              class="p-button-rounded p-button-warning mt-3 ml-3"
+              </div>
+              <div>
+                 <button pButton pRipple icon="pi pi-trash" 
+              class="p-button-rounded p-button-warning mt-2"
               [routerLink]="['/cursos/eliminar', course.id]"
               title="Eliminar"
               ></button>
-    </div>  
-  </div>   
+              </div>          
+            </div>  
+            </div>   
   </li>
   </ul>  
   </div>

@@ -14,7 +14,8 @@ import {DropdownModule} from 'primeng/dropdown';
 import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {MessagesModule} from 'primeng/messages';
 import {ToastModule} from 'primeng/toast';
-
+import {FileUploadModule} from 'primeng/fileupload';
+import {ProgressBarModule} from 'primeng/progressbar';
 
 
 @NgModule({
@@ -32,7 +33,9 @@ import {ToastModule} from 'primeng/toast';
     DropdownModule,
     ConfirmDialogModule,
     MessagesModule,
-    ToastModule
+    ToastModule,
+    FileUploadModule,
+    ProgressBarModule
   ]
 })
 export class PrimeNgModule { }
