@@ -34,10 +34,10 @@
             <br>
             <p *ngIf="experience.comments !== ''"><b>Comentarios:</b> {{experience.comments}}</p>
           </div>
-          <div class="col-auto d-block pt-2">
+          <div class="col-auto d-block pt-2" style="padding-left: 1vw;">
             <div>
               <button pButton pRipple icon="pi pi-pencil" 
-            class="p-button-rounded p-button-success "
+            class="p-button-rounded p-button-success"
             [routerLink]="['/experiencia/editar', experience.id]"
             title="Editar"
             ></button>
