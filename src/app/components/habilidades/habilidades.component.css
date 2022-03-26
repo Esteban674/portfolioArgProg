@@ -1,97 +1,18 @@
+.status-span{
+    color: var(--surface-a);
+}
 
-    .p-person {
-        padding: 0;
-        border: 0 none;
-    }
+.status-div{
+    text-align: center;
+    border-radius: 5px;
+    margin-right: 50px;
+}
 
-    .fullStack {
-        background-color: #72a5d3
-    }
+.status-span:hover{
+    text-shadow: 0 4px 17px rgba(255, 255, 255, 0.35);
+    color: var(--purple-600);
+}
 
-    .frontEnd {
-        background-color: #219bc3;
-    }
-
-    .backEnd {
-        background-color: #f36273;
-    }
-
-    .dataBase {
-        background-color: #add495;
-    }
-
-    .devOps {
-        background-color: #e9c16a;
-    }
-
-    .mobileApp {
-        background-color: #2a9c9d;
-    }
-
-    .node-header, .node-content {
-        padding: 0 !important;
-        margin: 0 !important;
-       
-    }
-
-    .node-header {
-        background-color: #495ebb;
-        width: 150px;
-    }
-
-    .node-content {
-        text-align: center;
-        border: 1px solid #495ebb;
-        height: 150px;
-        width: 150px;
-        padding-top: 20px !important;
-    }
-
-    .node-content img {
-        margin-top: 15px;
-        border-radius: 1%;
-    }
-
-    .department-cfo {
-        background-color: #7247bc;
-      
-    }
-
-    .department-coo {
-        background-color: #a534b6;
-      
-    }
-
-    .department-cto {
-        background-color: #e9286f;
-      
-    }
-
-    :host /deep/ .p-organizationchart .p-organizationchart-node-content {  
-        border: 1px solid #e0e5e6 !important;  
-        padding: 0 !important;  
-        border-radius: 2px !important;  
-        margin-top: -20px;  
-        margin-bottom: -30px !important;  
-      }  
-      :host /deep/ .p-organizationchart .p-organizationchart-line-down {  
-        height: 30px !important;  
-      }  
-      
-      :host /deep/ .node-content {  
-        text-align: center;  
-        border: 0px solid #b0c2d6;  
-      }  
-      
-      :host /deep/ .node-content {  
-        text-align: center;  
-        border: none !important;  
-        /* border: 1px solid #bdc2d6; */  
-        border-radius: 2px !important;  
-      }  
-
-      :host /deep/ .p-organizationchart-table>tbody>tr>td{
-          padding: 0.3rem !important;
-      }
-
-    
+.status-div:hover{
+    box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.35);
+}

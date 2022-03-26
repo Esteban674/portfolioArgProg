@@ -1,13 +1,13 @@
 <div>
     <div class="p-card page-border p-4">
-      <h2>Habilidades Duras</h2>
+      <h2>Habilidades</h2>
       <hr>
       <div class="grid page-border page-card mt-3">
     <div class="col-12">
-      <h3>Full Satck Developer</h3>
-    <p-table #dt1 [value]="habilidades" rowGroupMode="rowspan" groupRowsBy="group"  
-        sortField="group" sortMode="single" 
-        [globalFilterFields]="['name','category','status','group']"
+      <h3>Full Stack Developer</h3>
+    <p-table #dt1 [value]="habilidades" rowGroupMode="rowspan" groupRowsBy="group.name"  
+        sortField="group.name" sortMode="single" 
+        [globalFilterFields]="['name','category.name','status.name','group.name']"
         >
         <ng-template pTemplate="caption">
           <div class="flex">
@@ -23,7 +23,7 @@
               <th>
                 <div class="flex align-items-center">
                     Grupo
-                    <p-columnFilter type="text" field="group" display="menu"></p-columnFilter>
+                    <p-columnFilter type="text" field="group.name" display="menu"></p-columnFilter>
                 </div>
               </th>
               <th>
@@ -35,13 +35,13 @@
               <th>
                 <div class="flex align-items-center">
                     Categoría
-                    <p-columnFilter type="text" field="category" display="menu"></p-columnFilter>
+                    <p-columnFilter type="text" field="category.name" display="menu"></p-columnFilter>
                 </div>
               </th>
               <th>
                 <div class="flex align-items-center">
-                    Status
-                    <p-columnFilter type="text" field="status" display="menu"></p-columnFilter>
+                    Status or Level
+                    <p-columnFilter type="text" field="status.name" display="menu"></p-columnFilter>
                 </div>
               </th>
                 <th></th>
@@ -53,7 +53,7 @@
             <tr>
               <td *ngIf="rowgroup" [attr.rowspan]="rowspan">
                 <span class="p-text-bold p-ml-2">
-                  <h4>{{habilidad.group}}</h4></span>
+                  <h4>{{habilidad.group.name}}</h4></span>
               </td>
               <td>
                 <div class="d-flex">
@@ -62,10 +62,14 @@
                 </div>
              </td>
               <td>
-                  <span class="p-text-bold p-ml-2">{{habilidad.category}}</span>
+                  <span class="p-text-bold p-ml-2">{{habilidad.category.name}}</span>
                 </td>
-                <!-- <td><p-progressBar [value]="habilidad.level" [showValue]="false"></p-progressBar></td> -->
-                <td><p-tag value="{{habilidad.status}}" severity="{{habilidad.severity}}"></p-tag></td>
+                <td>
+                  <div class="status-div" [ngStyle]="{'backgroundColor': habilidad.status.color.toString()}">
+                    <span class="status-span"><b>{{habilidad.status.name}}</b></span>
+                  </div>
+                 
+                </td>
                 <td>
                 <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" ></button>
                 <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" ></button>

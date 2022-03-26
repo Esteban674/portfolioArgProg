@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Table } from 'primeng/table';
-import { HardSkills } from 'src/app/interfaces/interfaces';
+import { Skills } from 'src/app/interfaces/interfaces';
 
 
 @Component({
@@ -11,7 +11,7 @@ import { HardSkills } from 'src/app/interfaces/interfaces';
 export class HabilidadesComponent implements OnInit {
 
 
-  habilidades: HardSkills[] = [];
+  habilidades: Skills[] = [];
   
   valor: number = 3;
 
@@ -25,74 +25,74 @@ export class HabilidadesComponent implements OnInit {
     this.habilidades = [
       {
         name: 'Angular',
-        group: 'FrontEnd',
-        category: 'Framework',
-        status: 'Intermedio',
-        severity: 'info'
+        group: {name: 'FrontEnd'},
+        category: {name:'Framework'},
+        status: {name:'Intermedio', color:'#CAFFBF'}
+        
       },
       {
         name: 'Vue',
-        group: 'FrontEnd',
-        category: 'Framework',
-        status: 'Principante',
-        severity: 'warning'
+        group: {name: 'FrontEnd'},
+        category: {name:'Framework'},
+        status: {name:'Principiante', color:'#FDFFB6'}
+      
       },
       {
         name: 'React',
-        group: 'FrontEnd',
-        category: 'Framework',
-        status: 'Principante',
-        severity: 'warning'
+        group: {name: 'FrontEnd'},
+        category: {name:'Framework'},
+        status: {name:'Principiante', color:'#FDFFB6'}
+        
       },
       {
         name: 'Html5',
-        group: 'FrontEnd',
-        category: 'Basics',
-        status: 'Experto',
-        severity: 'primary'
+        group: {name: 'FrontEnd'},
+        category: {name: 'Basics'},
+        status: {name:'Experto', color: '#BDB2FF'}
+      
       },
       {
         name: 'CSS',
-        group: 'FrontEnd',
-        category: 'Basics',
-        status: 'Intermedio',
-        severity: 'info'
+        group: {name: 'FrontEnd'},
+        category:{name: 'Basics'},
+        status: {name:'Intermedio', color: '#CAFFBF'}
+        
       },
       {
         name: 'JavaScript',
-        group: 'FrontEnd',
-        category: 'Basics',
-        status: 'Intermedio',
-        severity: 'info'
+        group: {name: 'FrontEnd'},
+        category: {name:'Basics'},
+        status: {name:'Intermedio', color: '#CAFFBF'}
+      
       },
       {
         name: 'Prime NG',
-        group: 'FrontEnd',
-        category: 'Styles',
-        status: 'Intermedio',
-        severity: 'info'
+        group: {name: 'FrontEnd'},
+        category: {name:'Styles'},
+        status: {name:'Intermedio', color: '#CAFFBF'}
+        
 
       },
       {
         name: 'Bootstrap',
-        group: 'FrontEnd',
-        category: 'Styles',
-        status: 'Principante',
-        severity: 'warning'
+        group: {name: 'FrontEnd'},
+        category: {name:'Styles'},
+        status: {name:'Principiante', color:'#FDFFB6'}
+      
       },
       {
         name: 'Node',
-        group: 'BackEnd',
-        category: 'Framework',
-        status: 'Principante',
-        severity: 'warning'
+        group: {name: 'BackEnd'},
+        category: {name:'Framework'},
+        status: {name:'Principiante', color:'#FDFFB6'}
+        
       },
       {
         name: 'Java',
-        group: 'BackEnd',
-        category: 'Lenguaje',
-        status: 'Competente',
-        severity: 'success'
+        group: {name:'BackEnd'},
+        category: {name:'Lenguaje'},
+        status: {name:'Competente', color:'#A0C4FF'}
+        
       }
     ]
 
@@ -105,6 +105,7 @@ export class HabilidadesComponent implements OnInit {
     table.clear();
     
 }
+   
 
 }
 

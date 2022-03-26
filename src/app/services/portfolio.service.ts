@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpEvent, HttpHeaders, HttpRequest} from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Course, Education, Experience, User } from '../interfaces/interfaces';
+import { Course, Education, Experience, Skills, User } from '../interfaces/interfaces';
 import { environment } from 'src/environments/environment';
 
 const httpOptions = {
@@ -96,11 +96,11 @@ uploadImgEducation(archivo: File, id: any): Observable<HttpEvent<{}>>{
  }
 
  addCourse(course:Course): Observable<Course>{
-  return this.http.post<Course>(`${this.apiUrlL}/cursos/agregar`, course)
+  return this.http.post<Course>(`${this.apiUrlL}/cursos/agregar`, course);
 }
 
 updateCourse(course:Course): Observable<Course>{
-  return this.http.put<Course>(`${this.apiUrlL}/cursos/editar/${course.id}`, course)
+  return this.http.put<Course>(`${this.apiUrlL}/cursos/editar/${course.id}`, course);
 }
 
 deleteCourse(id: number): Observable<Course>{
@@ -117,6 +117,37 @@ uploadImgCourse(archivo: File, id: any): Observable<HttpEvent<{}>>{
   return this.http.request(req);
 }
 
+
+//////////////////// Habilidades ////////////////////////
+getSkills(): Observable<Skills[]>{
+  return this.http.get<Skills[]>(`${this.apiUrlL}/habilidades`);
+}
+
+getSkillPorId(id: number): Observable<Skills>{
+ return this.http.get<Skills>(`${this.apiUrlL}/habilidades/${id}`);
+}
+
+addSkill(skill:Skills): Observable<Skills>{
+ return this.http.post<Skills>(`${this.apiUrlL}/habilidades/agregar`, skill);
+}
+
+updateSkill(skill:Skills): Observable<Skills>{
+ return this.http.put<Skills>(`${this.apiUrlL}/habilidades/editar/${skill.id}`, skill);
+}
+
+deleteSkill(id: number): Observable<Skills>{
+return this.http.delete<Skills>(`${this.apiUrlL}/habilidades/eliminar/${id}`);
+}
+
+uploadImgSkill(archivo: File, id: any): Observable<HttpEvent<{}>>{
+ let formData = new FormData();
+ formData.append("archivo", archivo);
+ formData.append("id", id);
+
+ const req = new HttpRequest('POST', `${this.apiUrlL}/habilidades/upload`, formData, {reportProgress: true});
+
+ return this.http.request(req);
+}
 
 
 }

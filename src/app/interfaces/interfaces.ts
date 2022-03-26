@@ -51,12 +51,12 @@ export interface Course{
 
 
 
-export interface HardSkills{
+export interface Skills{
+    id?:number;   
     name:string;                //HTML, CSS, JavaScript, Idiomas
-    group: string;
-    category: string;
-    status:string;               //Principiante, Intermedio, Competente, Experto
-    severity:string;
+    group:Group;              //FrontEnd, BackEnd, Database, Dev Ops, Mobile App
+    category:Category;           //Framework, Lenguaje, Basics, Herramienta
+    status:Status;
     img?:string;
 }
 
@@ -65,10 +65,20 @@ export interface Group{
     name:string;                //FrontEnd, BackEnd, Database, Dev Ops, Mobile App
 }
 
+export interface Category{
+    id?:number;                 
+    name:string;                //Framework, Lenguaje, Basics, Herramienta
+}
+
+export interface Status{
+    id?:number;                 
+    name:string;                 //Status: Principiante, Intermedio, Competente, Experto o Level: Regular, Bueno, Muy Bueno, Excelente
+    color:string;
+}
 
 export interface SoftSkills{
     name:string;                //SCRUM, Administracion del tiempo, trabajo en equipo, comunicacion, iniciativa
-    level:string;               //Regular, Bueno, Muy Bueno, Excelente
+    level:string;               
     comments:string;
 }
 
