@@ -23,6 +23,7 @@ import { registerLocaleData } from '@angular/common';
 import { AddeducationComponent } from './components/forms/addeducation/addeducation.component';
 import { AddcourseComponent } from './components/forms/addcourse/addcourse.component';
 
+
 registerLocaleData(localeEsp);
 
 @NgModule({
@@ -47,7 +48,7 @@ registerLocaleData(localeEsp);
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    PrimeNgModule
+    PrimeNgModule,
   ],
   providers: [
      {provide: LOCALE_ID, useValue: 'es'}

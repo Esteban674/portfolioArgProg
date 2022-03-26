@@ -16,7 +16,9 @@ import {MessagesModule} from 'primeng/messages';
 import {ToastModule} from 'primeng/toast';
 import {FileUploadModule} from 'primeng/fileupload';
 import {ProgressBarModule} from 'primeng/progressbar';
-
+import { TagModule } from 'primeng/tag';
+import {TableModule} from 'primeng/table';
+import {RatingModule} from 'primeng/rating';
 
 @NgModule({
   exports: [
@@ -35,7 +37,10 @@ import {ProgressBarModule} from 'primeng/progressbar';
     MessagesModule,
     ToastModule,
     FileUploadModule,
-    ProgressBarModule
+    ProgressBarModule,
+    TagModule,
+    TableModule,
+    RatingModule
   ]
 })
 export class PrimeNgModule { }

@@ -3,34 +3,77 @@
       <h2>Habilidades Duras</h2>
       <hr>
       <div class="grid page-border page-card mt-3">
-        <div class="col-12">
-          <div class="col float-top-right">
-            <!-- Button trigger modal -->
-            <button pButton type="button" 
-                    class="p-button-rounded float-end" 
-                    icon="pi pi-pencil" iconPos="left" 
-                    data-bs-toggle="modal" 
-                    data-bs-target="#editarSkills"
-                    title="Editar"
-                    ></button>
-          </div>  
-      <p-organizationChart [value]="data1"
-          styleClass="company"
-          >
-          <ng-template let-node pTemplate="person">
-              <div class="node-header p-corner-top">{{node.label}}</div>
-              <div class="node-content" [class]="node.styleClass">
-                <div *ngIf="node.data.name">
-                  <div><p-chip label="{{node.data.name}}" image="./assets/img/{{node.data.name}}.png"></p-chip></div>
-                  <div><p-chip label="{{node.data.name1}}" image="./assets/img/{{node.data.name1}}.png"></p-chip></div>
-                  <div><p-chip label="{{node.data.name2}}" image="./assets/img/{{node.data.name2}}.png"></p-chip></div>
-                  </div>
-                  <div *ngIf="node.data.avatar" 
-                  ><img src="./assets/img/{{node.data.avatar}}" width="80" height="80"> </div>
-              </div>
-          </ng-template>
-      </p-organizationChart>
-    </div>
+    <div class="col-12">
+      <h3>Full Satck Developer</h3>
+    <p-table #dt1 [value]="habilidades" rowGroupMode="rowspan" groupRowsBy="group"  
+        sortField="group" sortMode="single" 
+        [globalFilterFields]="['name','category','status','group']"
+        >
+        <ng-template pTemplate="caption">
+          <div class="flex">
+              <button pButton label="Clear" class="p-button-outlined" icon="pi pi-filter-slash" (click)="clear(dt1);inputS.value = '';"></button>
+              <span class="p-input-icon-left ml-auto">
+                  <i class="pi pi-search"></i>
+                  <input #inputS pInputText type="text" (input)="dt1.filterGlobal($any($event.target).value, 'contains')" placeholder="Search keyword" />
+              </span>
+          </div>
+      </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+              <th>
+                <div class="flex align-items-center">
+                    Grupo
+                    <p-columnFilter type="text" field="group" display="menu"></p-columnFilter>
+                </div>
+              </th>
+              <th>
+                <div class="flex align-items-center">
+                    Nombre
+                    <p-columnFilter type="text" field="name" display="menu"></p-columnFilter>
+                </div>
+              </th>
+              <th>
+                <div class="flex align-items-center">
+                    Categoría
+                    <p-columnFilter type="text" field="category" display="menu"></p-columnFilter>
+                </div>
+              </th>
+              <th>
+                <div class="flex align-items-center">
+                    Status
+                    <p-columnFilter type="text" field="status" display="menu"></p-columnFilter>
+                </div>
+              </th>
+                <th></th>
+
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-habilidad let-rowgroup="rowgroup" let-rowIndex="rowIndex"
+            let-rowspan="rowspan">
+            <tr>
+              <td *ngIf="rowgroup" [attr.rowspan]="rowspan">
+                <span class="p-text-bold p-ml-2">
+                  <h4>{{habilidad.group}}</h4></span>
+              </td>
+              <td>
+                <div class="d-flex">
+                   <img [alt]="habilidad.group" src="assets/img/Angular.png" width="32" style="vertical-align: middle;" />
+                 <h5 class="pl-3">{{habilidad.name}}</h5>
+                </div>
+             </td>
+              <td>
+                  <span class="p-text-bold p-ml-2">{{habilidad.category}}</span>
+                </td>
+                <!-- <td><p-progressBar [value]="habilidad.level" [showValue]="false"></p-progressBar></td> -->
+                <td><p-tag value="{{habilidad.status}}" severity="{{habilidad.severity}}"></p-tag></td>
+                <td>
+                <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" ></button>
+                <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" ></button>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
   </div>  
 </div>
 </div>

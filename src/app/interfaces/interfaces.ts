@@ -53,11 +53,16 @@ export interface Course{
 
 export interface HardSkills{
     name:string;                //HTML, CSS, JavaScript, Idiomas
-    frontEnd: boolean;
-    backEnd: boolean;
-    level:string;               //Principiante, Intermedio, Competente, Experto
-    comments:string;
+    group: string;
+    category: string;
+    status:string;               //Principiante, Intermedio, Competente, Experto
+    severity:string;
     img?:string;
+}
+
+export interface Group{
+    id?:number;                 
+    name:string;                //FrontEnd, BackEnd, Database, Dev Ops, Mobile App
 }
 
 
