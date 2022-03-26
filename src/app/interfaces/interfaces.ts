@@ -54,13 +54,13 @@ export interface Course{
 export interface Skills{
     id?:number;   
     name:string;                //HTML, CSS, JavaScript, Idiomas
-    group:Group;              //FrontEnd, BackEnd, Database, Dev Ops, Mobile App
+    grupo:Grupo;              //FrontEnd, BackEnd, Database, Dev Ops, Mobile App
     category:Category;           //Framework, Lenguaje, Basics, Herramienta
     status:Status;
     img?:string;
 }
 
-export interface Group{
+export interface Grupo{
     id?:number;                 
     name:string;                //FrontEnd, BackEnd, Database, Dev Ops, Mobile App
 }

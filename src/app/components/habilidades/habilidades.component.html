@@ -7,7 +7,7 @@
       <h3>Full Stack Developer</h3>
     <p-table #dt1 [value]="habilidades" rowGroupMode="rowspan" groupRowsBy="group.name"  
         sortField="group.name" sortMode="single" 
-        [globalFilterFields]="['name','category.name','status.name','group.name']"
+        [globalFilterFields]="['name','category.name','status.name','grupo.name']"
         >
         <ng-template pTemplate="caption">
           <div class="flex">
@@ -23,7 +23,7 @@
               <th>
                 <div class="flex align-items-center">
                     Grupo
-                    <p-columnFilter type="text" field="group.name" display="menu"></p-columnFilter>
+                    <p-columnFilter type="text" field="grupo.name" display="menu"></p-columnFilter>
                 </div>
               </th>
               <th>
@@ -53,7 +53,7 @@
             <tr>
               <td *ngIf="rowgroup" [attr.rowspan]="rowspan">
                 <span class="p-text-bold p-ml-2">
-                  <h4>{{habilidad.group.name}}</h4></span>
+                  <h4>{{habilidad.grupo.name}}</h4></span>
               </td>
               <td>
                 <div class="d-flex">
