@@ -67,7 +67,10 @@
               </td>
               <td>
                 <div class="d-flex">
-                   <img [alt]="habilidad.group" src="assets/img/Angular.png" width="32" style="vertical-align: middle;" />
+                  <span *ngIf="habilidad.img"><img src="http://localhost:8080/uploads/img/{{habilidad.img}}" 
+                    class="imagen-card" style="cursor: pointer;" [routerLink]="['/habilidades/editar', habilidad.id]"></span>
+                    <span *ngIf="!habilidad.img"><img src="http://localhost:8080/images/image_add_fill_icon.png" 
+                      class="imagen-card" style="cursor: pointer;" [routerLink]="['/habilidades/editar', habilidad.id]"></span>
                  <h5 class="pl-3">{{habilidad.name}}</h5>
                 </div>
              </td>

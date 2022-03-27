@@ -1,1 +1,106 @@
-<p>addskill works!</p>
+<h3>{{(habilidad.id)? ((elimina)? 'Borrar': 'Editar') : 'Agregar'}} Habilidad</h3>
+<hr>
+<form (ngSubmit)="confirm()" autocomplete="off" [formGroup]="addSkillForm" enctype="multipart/form-data">
+   <div class="p-fluid grid pt-3">
+
+    <div class="field col-12 md:col-12">
+        <span class="p-float-label">      
+            <p-dropdown [options]="grupo" formControlName="grupo" optionLabel="name" id="grupo" placeholder="Grupo"></p-dropdown>
+            <label for="grupo">Grupo</label>
+        </span>
+        <span 
+        class="form-text text-danger"
+        *ngIf="campoEsValido('grupo')">
+        El grupo es requerido</span>    
+    </div>
+
+    <div class="field col-12 md:col-12">
+        <span class="p-float-label p-input-icon-left">
+            <i class="pi pi-sitemap"></i>
+            <input type="text" 
+                   pInputText 
+                   formControlName="name"
+                   id="name">  
+            <label for="name">Nombre</label>
+        </span>
+        <span 
+            class="form-text text-danger"
+            *ngIf="campoEsValido('name')">
+            El nombre es requerido</span>    
+    </div>
+   
+    <div class="field col-12 md:col-12">
+        <span class="p-float-label">      
+            <p-dropdown [options]="category" formControlName="category" optionLabel="name" id="category" placeholder="Categoría"></p-dropdown>
+            <label for="category">Categoría</label>
+        </span>
+        <span 
+        class="form-text text-danger"
+        *ngIf="campoEsValido('category')">
+        La categoría es requerida</span>    
+    </div>
+
+    <div class="field col-12 md:col-12">
+        <span class="p-float-label">      
+            <p-dropdown [options]="status" formControlName="status" optionLabel="name" id="status" placeholder="Status"></p-dropdown>
+            <label for="status">Status</label>
+        </span>
+        <span 
+        class="form-text text-danger"
+        *ngIf="campoEsValido('status')">
+        El status es requerido</span>    
+    </div>
+            
+
+    <div *ngIf="edita" class="field col-12 md:col-12">
+        <div class="row" style="align-items: center;">
+            <div class="col-10">
+                <input (change)="seleccionarFoto($event)" type="file" class="form-control p-inputtext"
+                    id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+            </div>
+            <div class="col-2">
+                <button pButton type="button" (click)="subirFoto()" [disabled]="!fotoSeleccionada"
+                    class="p-button-help" id="inputGroupFileAddon04" icon="pi pi-check" iconPos="left"
+                    label="Subir"></button>
+            </div>
+            <span>
+                <div *ngIf="progreso > 0" class="progress" style="height: 25px;">
+                <div class="progress-bar progress-bar-striped progress-bar" role="progressbar"
+                    attr.aria-valuenow="{{progreso}}" aria-valuemin="0" aria-valuemax="100"
+                    [ngStyle]="{width: progreso +'%'}">
+                    {{progreso}}%
+                </div>
+            </div> 
+            </span>
+            <span>
+                <ul *ngIf="fotoSeleccionada">
+                    <li>Nueva imagen: {{fotoSeleccionada.name}} - {{fotoSeleccionada.size}} bytes</li>
+                </ul>
+                <span *ngIf="habilidad?.img"><img src="http://localhost:8080/uploads/img/{{habilidad.img}}"
+                        class="imagen-card"> {{habilidad.img}}</span>
+            </span>            
+        </div>
+    </div>
+
+
+</div>
+<div *ngIf="!elimina">
+    <button pButton type="submit" label="Confirmar"  icon="pi pi-check" class="float-end" [disabled]="addSkillForm.invalid"></button>
+</div>
+<div *ngIf="elimina">
+    <button pButton type="button" label="Borrar"  icon="pi pi-times" class="float-end p-button-warning" (click)="borrar()"></button>
+</div>
+
+<button pButton type="button" label="Cancelar" class="p-button-secondary float-end me-2" [routerLink]="'/habilidades'"></button>
+<p-confirmDialog #cd [style]="{width: '50vw'}">
+    <ng-template pTemplate="header">
+        <h5>Se {{(habilidad.id)? ((elimina)? 'eliminará' : 'actualizará') : 'agregará'}} la experiencia</h5>
+    </ng-template>
+    <ng-template pTemplate="footer">
+        <button type="button" pButton class="p-button-danger" icon="pi pi-times" label="No" (click)="cd.reject()"></button>
+        <button type="button" pButton class="p-button-success" icon="pi pi-check" label="Si" (click)="cd.accept()"></button>
+    </ng-template>
+</p-confirmDialog>
+</form>
+
+
