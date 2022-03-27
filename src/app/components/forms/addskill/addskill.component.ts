@@ -55,7 +55,8 @@ export class AddskillComponent implements OnInit {
         { id: 42, name: 'DataBase' },
         { id: 43, name: 'Dev Ops' },
         { id: 44, name: 'Mobile App' },
-        { id: 45, name: 'Soft Skills' }
+        { id: 45, name: 'Soft Skills' },
+        { id: 78, name: 'Tools' }
       ];
 
       this.category = [
@@ -74,7 +75,19 @@ export class AddskillComponent implements OnInit {
         { id: 74, name: 'Virtualization' },
         { id: 75, name: 'Android' },
         { id: 76, name: 'IOS' },
-        { id: 77, name: 'Cross Platform' }
+        { id: 77, name: 'Cross Platform' },
+        { id: 79, name: 'IDE' },
+        { id: 80, name: 'Management' },
+        { id: 81, name: 'Time Management' },
+        { id: 82, name: 'Communication' },
+        { id: 83, name: 'Adaptability' },
+        { id: 84, name: 'Problem-solving' },
+        { id: 85, name: 'Teamwork' },
+        { id: 86, name: 'Creativity' },
+        { id: 87, name: 'Leadership' },
+        { id: 88, name: 'Interpersonal skills' },
+        { id: 89, name: 'Work ethic' },
+        { id: 90, name: 'Attention to detail' }
       ];
 
       this.status = [
