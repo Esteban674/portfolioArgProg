@@ -66,11 +66,11 @@
                   <h4>{{habilidad.grupo.name}}</h4></span>
               </td>
               <td>
-                <div class="d-flex">
+                <div class="d-flex align-items-center">
                   <span *ngIf="habilidad.img"><img src="http://localhost:8080/uploads/img/{{habilidad.img}}" 
-                    class="imagen-card" style="cursor: pointer;" [routerLink]="['/habilidades/editar', habilidad.id]"></span>
+                    class="imagen-skill" style="cursor: pointer;" [routerLink]="['/habilidades/editar', habilidad.id]"></span>
                     <span *ngIf="!habilidad.img"><img src="http://localhost:8080/images/image_add_fill_icon.png" 
-                      class="imagen-card" style="cursor: pointer;" [routerLink]="['/habilidades/editar', habilidad.id]"></span>
+                      class="imagen-skill" style="cursor: pointer;" [routerLink]="['/habilidades/editar', habilidad.id]"></span>
                  <h5 class="pl-3">{{habilidad.name}}</h5>
                 </div>
              </td>
