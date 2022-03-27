@@ -22,6 +22,7 @@ import localeEsp from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
 import { AddeducationComponent } from './components/forms/addeducation/addeducation.component';
 import { AddcourseComponent } from './components/forms/addcourse/addcourse.component';
+import { AddskillComponent } from './components/forms/addskill/addskill.component';
 
 
 registerLocaleData(localeEsp);
@@ -41,6 +42,7 @@ registerLocaleData(localeEsp);
     AddexperienceComponent,
     AddeducationComponent, 
     AddcourseComponent,
+    AddskillComponent
   ],
   imports: [
     BrowserModule,

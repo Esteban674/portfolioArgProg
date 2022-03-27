@@ -9,6 +9,7 @@ import { ExperienciaComponent } from './experiencia/experiencia.component';
 import { HabilidadesComponent } from './habilidades/habilidades.component';
 import { AddeducationComponent } from './forms/addeducation/addeducation.component';
 import { AddcourseComponent } from './forms/addcourse/addcourse.component';
+import { AddskillComponent } from './forms/addskill/addskill.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,9 @@ const routes: Routes = [
       { path: 'cursos/editar/:id', component: AddcourseComponent},
       { path: 'cursos/eliminar/:id', component: AddcourseComponent},
       { path: 'habilidades', component: HabilidadesComponent},
+      { path: 'habilidades/agregar', component: AddskillComponent},
+      { path: 'habilidades/editar/:id', component: AddskillComponent},
+      { path: 'habilidades/eliminar/:id', component: AddskillComponent},
       { path: 'contacto', component: ContactoComponent},
       { path: '**', redirectTo: 'acercade'}
     ]

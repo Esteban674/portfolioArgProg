@@ -1,6 +1,16 @@
 <div>
     <div class="p-card page-border p-4">
-      <h2>Habilidades</h2>
+      <div class="row">
+        <div class="col d-sm-inline-flex">
+        <h2>Habilidades</h2> 
+        <button pButton type="button" 
+        class="p-button-rounded float-end ms-3" 
+        icon="pi pi-plus" iconPos="left" 
+        title="Agregar"
+        [routerLink]="'/habilidades/agregar'"
+        ></button>
+        </div>
+      </div>
       <hr>
       <div class="grid page-border page-card mt-3">
     <div class="col-12">
@@ -71,8 +81,12 @@
                  
                 </td>
                 <td>
-                <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" ></button>
-                <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning" ></button>
+                <button pButton pRipple icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2" 
+                [routerLink]="['/habilidades/editar', habilidad.id]"
+                title="Editar"></button>
+                <button pButton pRipple icon="pi pi-trash" class="p-button-rounded p-button-warning"
+                [routerLink]="['/habilidades/eliminar', habilidad.id]"
+                title="Eliminar" ></button>
                 </td>
             </tr>
         </ng-template>
