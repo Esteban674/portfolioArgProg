@@ -10,6 +10,7 @@ import { HabilidadesComponent } from './habilidades/habilidades.component';
 import { AddeducationComponent } from './forms/addeducation/addeducation.component';
 import { AddcourseComponent } from './forms/addcourse/addcourse.component';
 import { AddskillComponent } from './forms/addskill/addskill.component';
+import { ProyectosComponent } from './proyectos/proyectos.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,7 @@ const routes: Routes = [
       { path: 'habilidades/agregar', component: AddskillComponent},
       { path: 'habilidades/editar/:id', component: AddskillComponent},
       { path: 'habilidades/eliminar/:id', component: AddskillComponent},
+      { path: 'proyectos', component: ProyectosComponent},
       { path: 'contacto', component: ContactoComponent},
       { path: '**', redirectTo: 'acercade'}
     ]

@@ -23,6 +23,7 @@ import { registerLocaleData } from '@angular/common';
 import { AddeducationComponent } from './components/forms/addeducation/addeducation.component';
 import { AddcourseComponent } from './components/forms/addcourse/addcourse.component';
 import { AddskillComponent } from './components/forms/addskill/addskill.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
 
 
 registerLocaleData(localeEsp);
@@ -42,7 +43,8 @@ registerLocaleData(localeEsp);
     AddexperienceComponent,
     AddeducationComponent, 
     AddcourseComponent,
-    AddskillComponent
+    AddskillComponent,
+    ProyectosComponent
   ],
   imports: [
     BrowserModule,

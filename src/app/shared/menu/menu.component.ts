@@ -42,6 +42,11 @@ export class MenuComponent implements OnInit {
         routerLink: '/habilidades'
       },
       {
+        label: 'Proyectos',
+        icon: 'pi pi-inbox',
+        routerLink: '/proyectos'
+      },
+      {
         label: 'Contacto',
         icon: 'pi pi-envelope',
         routerLink: '/contacto'
