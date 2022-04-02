@@ -44,7 +44,7 @@ registerLocaleData(localeEsp);
     AddeducationComponent, 
     AddcourseComponent,
     AddskillComponent,
-    ProyectosComponent
+    ProyectosComponent,
   ],
   imports: [
     BrowserModule,

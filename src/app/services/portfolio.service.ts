@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpEvent, HttpHeaders, HttpRequest} from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 import { Course, Education, Experience, Skills, User } from '../interfaces/interfaces';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 
 const httpOptions = {
   headers: new HttpHeaders({ 
@@ -17,7 +18,7 @@ export class PortfolioService {
 
 
   private apiUrlL: string = environment.baseUrl;
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
  getUser(): Observable<User>{
   return this.http.get<User>(`${this.apiUrlL}/user`);
