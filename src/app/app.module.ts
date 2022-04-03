@@ -16,7 +16,7 @@ import { PrimeNgModule } from './shared/prime-ng/prime-ng.module';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { MenuComponent } from './shared/menu/menu.component';
 import { AddexperienceComponent } from './components/forms/addexperience/addexperience.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import localeEsp from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
@@ -24,6 +24,10 @@ import { AddeducationComponent } from './components/forms/addeducation/addeducat
 import { AddcourseComponent } from './components/forms/addcourse/addcourse.component';
 import { AddskillComponent } from './components/forms/addskill/addskill.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { LoginComponent } from './auth/login.component';
+import { RegistroComponent } from './auth/registro.component';
+import { ToastrModule } from 'ngx-toastr';
+import { interceptorProvider } from './interceptors/prod-interceptor.service';
 
 
 registerLocaleData(localeEsp);
@@ -45,6 +49,9 @@ registerLocaleData(localeEsp);
     AddcourseComponent,
     AddskillComponent,
     ProyectosComponent,
+    LoginComponent,
+    RegistroComponent
+
   ],
   imports: [
     BrowserModule,
@@ -53,9 +60,13 @@ registerLocaleData(localeEsp);
     ReactiveFormsModule,
     AppRoutingModule,
     PrimeNgModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    FormsModule
   ],
   providers: [
-     {provide: LOCALE_ID, useValue: 'es'}
+     {provide: LOCALE_ID, useValue: 'es'},
+     interceptorProvider
     ],
   bootstrap: [AppComponent]
 })

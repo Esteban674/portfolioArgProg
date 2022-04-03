@@ -10,10 +10,11 @@
         <!-- <button type="button" class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
           Login
          </button> -->
-         <button type="button" class="btn btn-outline-light me-2" [routerLink]="['/login']">
+         <span *ngIf="isLogged" class="me-3 align-items-center">{{nombreUsuario | titlecase }}</span>
+         <button *ngIf="!isLogged" type="button" class="btn btn-outline-light me-2" [routerLink]="['/login']">
           Login
          </button>
-        <button type="button" class="btn btn-outline-light">Sign-up</button>
+        <button *ngIf="isLogged" type="button" class="btn btn-outline-light" (click)="onLogOut()" [routerLink]="['/']">Sign-up</button>
       </div>
       <div class="col-md-0">
         <a href="https://www.facebook.com/people/Esteban-Gabriel-Jes%C3%BAs-Perea/100010899370670/" target="_blank"><i class="bi bi-facebook iconRed iconRedF"></i></a> 

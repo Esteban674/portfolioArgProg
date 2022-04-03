@@ -11,6 +11,9 @@ import { AddeducationComponent } from './forms/addeducation/addeducation.compone
 import { AddcourseComponent } from './forms/addcourse/addcourse.component';
 import { AddskillComponent } from './forms/addskill/addskill.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
+import { LoginComponent } from '../auth/login.component';
+import { RegistroComponent } from '../auth/registro.component';
+import { ProdGuardService as guard } from '../guards/prod-guard.service';
 
 const routes: Routes = [
   {
@@ -18,23 +21,25 @@ const routes: Routes = [
     children: [
       { path: 'acercade', component: AcercadeComponent},
       { path: 'experiencia', component: ExperienciaComponent},
-      { path: 'experiencia/agregar', component: AddexperienceComponent},
-      { path: 'experiencia/editar/:id', component: AddexperienceComponent},
-      { path: 'experiencia/eliminar/:id', component: AddexperienceComponent},
+      { path: 'experiencia/agregar', component: AddexperienceComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+      { path: 'experiencia/editar/:id', component: AddexperienceComponent, canActivate: [guard], data: { expectedRol: ['admin']} },
+      { path: 'experiencia/eliminar/:id', component: AddexperienceComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
       { path: 'educacion', component: EducacionComponent},
-      { path: 'educacion/agregar', component: AddeducationComponent},
-      { path: 'educacion/editar/:id', component: AddeducationComponent},
-      { path: 'educacion/eliminar/:id', component: AddeducationComponent},
+      { path: 'educacion/agregar', component: AddeducationComponent, canActivate: [guard], data: { expectedRol: ['admin']} },
+      { path: 'educacion/editar/:id', component: AddeducationComponent, canActivate: [guard], data: { expectedRol: ['admin']} },
+      { path: 'educacion/eliminar/:id', component: AddeducationComponent, canActivate: [guard], data: { expectedRol: ['admin']} },
       { path: 'cursos', component: CursosComponent},
-      { path: 'cursos/agregar', component: AddcourseComponent},
-      { path: 'cursos/editar/:id', component: AddcourseComponent},
-      { path: 'cursos/eliminar/:id', component: AddcourseComponent},
+      { path: 'cursos/agregar', component: AddcourseComponent, canActivate: [guard], data: { expectedRol: ['admin']} },
+      { path: 'cursos/editar/:id', component: AddcourseComponent, canActivate: [guard], data: { expectedRol: ['admin']} },
+      { path: 'cursos/eliminar/:id', component: AddcourseComponent, canActivate: [guard], data: { expectedRol: ['admin']} },
       { path: 'habilidades', component: HabilidadesComponent},
-      { path: 'habilidades/agregar', component: AddskillComponent},
-      { path: 'habilidades/editar/:id', component: AddskillComponent},
-      { path: 'habilidades/eliminar/:id', component: AddskillComponent},
+      { path: 'habilidades/agregar', component: AddskillComponent, canActivate: [guard], data: { expectedRol: ['admin']} },
+      { path: 'habilidades/editar/:id', component: AddskillComponent, canActivate: [guard], data: { expectedRol: ['admin']} },
+      { path: 'habilidades/eliminar/:id', component: AddskillComponent, canActivate: [guard], data: { expectedRol: ['admin']} },
       { path: 'proyectos', component: ProyectosComponent},
       { path: 'contacto', component: ContactoComponent},
+      { path: 'login', component: LoginComponent},
+      { path: 'registro', component: RegistroComponent},
       { path: '**', redirectTo: 'acercade'}
     ]
   }

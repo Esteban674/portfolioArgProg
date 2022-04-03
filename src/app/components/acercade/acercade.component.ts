@@ -15,6 +15,7 @@ export class AcercadeComponent implements OnInit {
 
   ngOnInit(): void {
     this.portfolioService.getUser().subscribe(data => {this.user = data;});
+   
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Experience } from 'src/app/interfaces/interfaces';
 import { PortfolioService } from 'src/app/services/portfolio.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -11,8 +12,7 @@ export class ExperienciaComponent implements OnInit {
 
   experiences: Experience[] = [];
 
-
-  constructor(private portfolioService: PortfolioService,) { }
+  constructor(private portfolioService: PortfolioService, private tokenService: TokenService) { }
 
   ngOnInit(): void {
 
@@ -25,5 +25,6 @@ export class ExperienciaComponent implements OnInit {
         return 0;
       } )
     });
+
   }
 }

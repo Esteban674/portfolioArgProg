@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter, Subscription } from 'rxjs';
+import { TokenService } from 'src/app/services/token.service';
 import Typed from 'typed.js';
 
 
@@ -10,8 +13,15 @@ import Typed from 'typed.js';
 })
 export class HeaderComponent implements OnInit {
 
+  isLogged = false;
+  nombreUsuario = '';
+
+  public subscriber!: Subscription;
   
-  constructor() { }
+  constructor(private tokenService: TokenService, private router: Router) {
+    
+  
+   }
 
   ngOnInit(): void {
   
@@ -33,6 +43,34 @@ export class HeaderComponent implements OnInit {
       contentType: 'html', // 'html' o 'null' para texto sin formato
     });
   
+    this.subscriber = this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event) => {
+      if (this.tokenService.getToken()) {
+        this.isLogged = true;
+        this.nombreUsuario = this.tokenService.getUserName();
+      } else {
+        this.isLogged = false;
+        this.nombreUsuario = '';
+      }
+    });
+
+
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+      this.nombreUsuario = this.tokenService.getUserName();
+    } else {
+      this.isLogged = false;
+      this.nombreUsuario = '';
+    }
+
+ 
+
+  }
+
+  onLogOut(): void{
+    this.tokenService.logOut();
+    window.location.reload();
   }
 
 
