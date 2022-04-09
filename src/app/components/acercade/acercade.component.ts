@@ -20,8 +20,11 @@ export class AcercadeComponent implements OnInit {
   " guards, pipes, formularios Reactivos, sesión de ususario, uso de Bootstrap y PrimeNG como Frameworks Styles. Para la realización del BackEnd" + 
   " se empleó Spring Boot como framework " +
   "+ JPA + Hibernate con Java como lenguaje y MySQL como gestor de base de datos. En base al modelo MVC se crearon las API necesarias para" +
-  " responder a todas la peticiones del Front. Se utilizó arquitectura multicapa, Controller, Model, Repository, Service. Anotaciones," +
-  ", inyección de dependencias,  Autenticación con JWT, seguridad en rutas con gestión de Roles, upload de imágenes"
+  " responder a todas la peticiones del FrontEnd. Se utilizó arquitectura multicapa, Controller, Model, Repository, Service, Anotaciones" +
+  ", inyección de dependencias,  Autenticación con JWT, seguridad en rutas con gestión de Roles y upload de imágenes. Sinceramente la realización de "+
+  "este curso ha sido una experiencia muy linda y motivadora, agradezco profundamente a todas aquellas personas que hiciron posible ésta capacitación, "+
+  "han puesto a nuestro alcance un mundo de nuevas oportunidades con todo lo que ello significa para muchas personas. Orgulloso de ser argentino y de "+
+  "haber compartido con todos ustedes este camino de aprendizaje. "
   
 
   constructor(private portfolioService: PortfolioService) { }

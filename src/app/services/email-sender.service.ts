@@ -4,13 +4,14 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Contacto } from '../interfaces/interfaces';
+import { baseUrl } from '../shared/ruta';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmailSenderService {
 
-  private apiUrlL: string = environment.baseUrl;
+  private apiUrlL: string = baseUrl;
 
   constructor(private http: HttpClient, private router: Router) { }
 

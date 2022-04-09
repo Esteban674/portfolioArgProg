@@ -4,6 +4,7 @@ import { catchError, Observable, throwError } from 'rxjs';
 import { Course, Education, Experience, Skills, User } from '../interfaces/interfaces';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
+import { baseUrl } from '../shared/ruta';
 
 const httpOptions = {
   headers: new HttpHeaders({ 
@@ -17,7 +18,7 @@ const httpOptions = {
 export class PortfolioService {
 
 
-  private apiUrlL: string = environment.baseUrl;
+  private apiUrlL: string = baseUrl;
   constructor(private http: HttpClient, private router: Router) { }
 
  getUser(): Observable<User>{
