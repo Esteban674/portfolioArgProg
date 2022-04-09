@@ -11,6 +11,31 @@
     z-index: 1;
 }
 
+.fsd{
+    position: absolute;
+    margin-top: -80px;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 2em;
+    font-family: var(--font-family);
+    font-weight: bold;
+}
+.fsd:hover{
+    position: absolute;
+    margin-top: -80px;
+    z-index: 1;
+    font-size: 2em;
+    font-family: var(--font-family);
+    font-weight: bold;
+    color: #fafafa;
+    text-shadow: 0 4px 17px rgba(255, 255, 255, 0.35);
+}
+
+.centrar{
+    text-align: center;
+    padding-right: 12%;
+}
+
 
 .border-bottom{
     border-bottom: 1px solid #ADB9D3 !important;

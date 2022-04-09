@@ -2,41 +2,17 @@
 
 <div>
     <div class="p-card page-border p-4">
-
-          <h2>{{user.headLine}}</h2>
+          <h2>Portfolio</h2>
           <hr>
           <div class="grid page-border page-card mt-3 me-3">
             <div class="col-11">
-          <p>Mi nombre es {{user.name}} {{user.lastName}}  Lorem ipsum dolor sit amet consectetur adipisicing elit.que tenetur explicabo voluptates quae libero delenitique tenetur explicabo voluptates quae libero deleniti Eaque tenetur explicabo voluptates quae libero deleniti praesentium.</p>
+              <textarea rows="12" cols="120" pInputTextarea [(ngModel)]="data" [disabled]="!editing" [autoResize]="true"></textarea>
             </div>
           <div class="col-1">
-          <!-- Button trigger modal -->
-          <button pButton type="button" 
-                class="p-button-rounded float-end" 
-                icon="pi pi-pencil" iconPos="left" 
-                data-bs-toggle="modal" 
-                data-bs-target="#editarAcercade"
-                title="Editar"
-                ></button>
+            <button *ngIf="!editing" pButton pRipple type="button" icon="pi pi-pencil" (click)="editar()" class="p-button-rounded"></button>
+            <button *ngIf="editing" pButton pRipple type="button" icon="pi pi-check" (click)="guardar()" class="p-button-rounded p-button-success p-mr-2"></button>
+            <button *ngIf="editing" pButton pRipple type="button" icon="pi pi-times" (click)="cancelar()" class="p-button-rounded p-button-danger mt-2"></button>
         </div>  
        </div>  
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="editarAcercade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content p-card">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Editar Acerca de</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
-    </div>
-  </div>
+    
 </div>

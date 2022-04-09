@@ -5,3 +5,7 @@
     padding: 20px 10px 10px 260px;
     border: 1px solid #ADB9D3;
 }
+
+.p-disabled, .p-component:disabled {
+    opacity: 1 !important;
+}

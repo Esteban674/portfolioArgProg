@@ -1,1 +1,100 @@
-<p>contacto works!</p>
+<form (ngSubmit)="confirm()" autocomplete="off" [formGroup]="contactoForm">
+    <div class="container p-card page-border p-4">
+        <div class="row p-fluid justify-content-center">
+            <div class="col ml-5">
+                <h2>Contacto</h2>
+
+                <div class="field col-6 md:col-10 pt-4">
+                    <span class="p-float-label p-input-icon-left">
+                        <i class="pi pi-id-card"></i>
+                        <input type="text" pInputText formControlName="name" id="name">
+                        <label for="name">Tu Nombre</label>
+                    </span>
+                    <span class="form-text text-danger" *ngIf="campoEsValido('name')">
+                        El nombre es requerido</span>
+                </div>
+                <div class="field col-6 md:col-10">
+                    <span class="p-float-label p-input-icon-left">
+                        <i class="pi pi-id-card"></i>
+                        <input type="text" pInputText formControlName="lastName" id="lastName">
+                        <label for="lastName">Tu Apellido</label>
+                    </span>
+                    <span class="form-text text-danger" *ngIf="campoEsValido('lastName')">
+                        El apellido es requerido</span>
+                </div>
+                <div class="field col-6 md:col-10">
+                    <span class="p-float-label p-input-icon-left">
+                        <i class="pi pi-envelope"></i>
+                        <input type="email" pInputText formControlName="email" id="email">
+                        <label for="email">Tu email</label>
+                    </span>
+                    <span class="form-text text-danger" *ngIf="campoEsValido('email')">
+                        {{ emailErrorMsg }}</span>
+                </div>
+
+                <div class="field col-6 md:col-10">
+                    <span class="p-float-label p-input-icon-left">
+                        <i class="pi pi-comment"></i>
+                        <textarea type="text" pInputTextarea formControlName="comments" id="comments"
+                            [autoResize]="true"></textarea>
+                        <label for="comments">Tus Comentarios</label>
+                    </span>
+                    <span class="form-text text-danger" *ngIf="campoEsValido('comments')">
+                        Tus comentarios son requeridos y agradecidos</span>
+                </div>
+                <div class="col-4">
+                    <button pButton type="submit" label="Enviar" icon="pi pi-check"
+                        [disabled]="contactoForm.invalid"></button>
+                </div>
+                <p-confirmDialog #cd [style]="{width: '50vw'}">
+                    <ng-template pTemplate="header">
+                        <h5>Se enviarán tus comentarios</h5>
+                    </ng-template>
+                    <ng-template pTemplate="footer">
+                        <button type="button" pButton class="p-button-danger" icon="pi pi-times" label="No"
+                            (click)="cd.reject()"></button>
+                        <button type="button" pButton class="p-button-success" icon="pi pi-check" label="Si"
+                            (click)="cd.accept()"></button>
+                    </ng-template>
+                </p-confirmDialog>
+            </div>
+            <div class="col-6 ">
+                <div class="row d-block pt-7 pl-8" style="min-height: 350px">
+                    <div class="col m-3 flex align-items-center">
+                        <i class="pi pi-map-marker me-2"></i>Pilar, Córdoba, Argentina
+                    </div>
+                    <div class="col m-3 flex align-items-center">
+                        <i class="pi pi-whatsapp me-2"></i><a href="http://wa.me/+543572617516" target="_blank"
+                            Class="href">+54 3572-617516</a>
+                    </div>
+                    <div class="col m-3 flex align-items-center">
+                        <i class="pi pi-envelope me-2"></i>estebanperea@gmail.com
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-2">
+                        <a href="https://www.facebook.com/people/Esteban-Gabriel-Jes%C3%BAs-Perea/100010899370670/"
+                            target="_blank"><i class="bi bi-facebook iconRed iconRedF icon"></i></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="https://www.instagram.com/estebangabrieljesus/" target="_blank"><i
+                                class="bi bi-instagram iconRed iconRedI icon unSeg"></i></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="https://www.linkedin.com/in/esteban-perea-211582224/?originalSubdomain=ar"
+                            target="_blank"><i class="bi bi-linkedin iconRed iconRedL icon dosSeg"></i></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="https://github.com/Esteban674" target="_blank"> <i
+                                class="bi bi-github iconRed iconRedG icon tresSeg"></i></a>
+                    </div>
+                    <div class="col-2">
+                        <a href="http://wa.me/+543572617516" target="_blank"> <i
+                                class="pi pi-whatsapp iconRed iconRedW icon cuatroSeg"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>

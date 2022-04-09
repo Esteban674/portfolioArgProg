@@ -1,0 +1,71 @@
+.icon{
+    display: inline-block;
+    font-size: 44px;
+    animation: float 5s ease-in-out infinite;
+}
+
+.unSeg{
+    animation-delay: 1s;
+}
+
+.dosSeg{
+    animation-delay: 2s;
+}
+
+.tresSeg{
+    animation-delay: 3s;
+}
+
+.cuatroSeg{
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.iconRed{
+    margin: 0px 5px;
+    font-size: 3em;
+    cursor: pointer;
+}
+
+.iconRed.iconRedF{
+    color: #3B5998;
+ 
+}
+
+
+.iconRed.iconRedI{
+   color: #bb0f90;
+ 
+}
+
+
+.iconRed.iconRedL{
+    color: #0e76a8;
+   
+}
+
+.iconRed.iconRedG{
+    color: #fafafa;
+   
+}
+
+.iconRed.iconRedW{
+    color: #00BB2D;
+   
+}
+
+.href{
+    color: rgba(255, 255, 255, 0.8);
+     text-decoration: none;
+    }

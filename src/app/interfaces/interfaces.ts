@@ -10,6 +10,11 @@ export interface User {
     img:string;
 }
 
+export interface AcercaDe{
+    id?:number;
+    contenido:string;
+}
+
 export interface Experience{
     id?:number;
     position:string;        //Cargo
@@ -86,4 +91,11 @@ export interface Projects{
     name:string;
     url:string;
     img?:string;
+}
+
+export interface Contacto{
+    name:string;
+    lastName:string;
+    email:string;
+    comments:string;
 }
