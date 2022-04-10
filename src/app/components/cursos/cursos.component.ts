@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from 'src/app/interfaces/interfaces';
 import { PortfolioService } from 'src/app/services/portfolio.service';
+import { baseUrl } from 'src/app/shared/ruta';
 
 @Component({
   selector: 'app-cursos',
@@ -10,6 +11,7 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 export class CursosComponent implements OnInit {
 
   courses: Course[] = [];
+  urlserver: string = baseUrl;
 
   constructor(private portfolioService: PortfolioService) { }
 

@@ -67,9 +67,9 @@
               </td>
               <td>
                 <div class="d-flex align-items-center">
-                  <span *ngIf="habilidad.img"><img src="http://localhost:8080/uploads/img/{{habilidad.img}}" 
+                  <span *ngIf="habilidad.img"><img src="{{urlserver}}/uploads/img/{{habilidad.img}}" 
                     class="imagen-skill" style="cursor: pointer;" [routerLink]="['/habilidades/editar', habilidad.id]"></span>
-                    <span *ngIf="!habilidad.img"><img src="http://localhost:8080/images/image_add_fill_icon.png" 
+                    <span *ngIf="!habilidad.img"><img src="{{urlserver}}/images/image_add_fill_icon.png" 
                       class="imagen-skill" style="cursor: pointer;" [routerLink]="['/habilidades/editar', habilidad.id]"></span>
                  <h5 class="pl-3">{{habilidad.name}}</h5>
                 </div>

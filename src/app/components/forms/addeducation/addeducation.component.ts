@@ -6,6 +6,7 @@ import { ConfirmationService, Message, PrimeNGConfig } from 'primeng/api';
 import { switchMap } from 'rxjs/operators';
 import { Education } from 'src/app/interfaces/interfaces';
 import { PortfolioService } from 'src/app/services/portfolio.service';
+import { baseUrl } from 'src/app/shared/ruta';
 
 @Component({
   selector: 'app-addeducation',
@@ -27,6 +28,8 @@ export class AddeducationComponent implements OnInit {
     })
 
     msgs: Message[] = [];
+
+    urlserver: string = baseUrl;
   
     elimina:boolean = false;
     edita: boolean = false;

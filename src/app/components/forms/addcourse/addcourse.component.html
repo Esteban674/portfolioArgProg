@@ -84,7 +84,7 @@
                     <ul *ngIf="fotoSeleccionada">
                         <li>Nueva imagen: {{fotoSeleccionada.name}} - {{fotoSeleccionada.size}} bytes</li>
                     </ul>
-                    <span *ngIf="curso?.img"><img src="http://localhost:8080/uploads/img/{{curso.img}}"
+                    <span *ngIf="curso?.img"><img src="{{urlserver}}/uploads/img/{{curso.img}}"
                             class="imagen-card"> {{curso.img}}</span>
                 </span>            
             </div>

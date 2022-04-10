@@ -6,6 +6,7 @@ import { ConfirmationService, Message, PrimeNGConfig } from 'primeng/api';
 import { switchMap } from 'rxjs/operators';
 import { Category, Grupo, Skills, Status } from 'src/app/interfaces/interfaces';
 import { PortfolioService } from 'src/app/services/portfolio.service';
+import { baseUrl } from 'src/app/shared/ruta';
 
 @Component({
   selector: 'app-addskill',
@@ -28,6 +29,8 @@ export class AddskillComponent implements OnInit {
     status: Status[] = [];
 
     msgs: Message[] = [];
+
+    urlserver: string = baseUrl;
 
     elimina:boolean = false;
     edita: boolean = false;

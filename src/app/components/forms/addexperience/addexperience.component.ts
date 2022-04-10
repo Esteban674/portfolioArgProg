@@ -6,6 +6,7 @@ import { ConfirmationService, Message, PrimeNGConfig } from 'primeng/api';
 import { switchMap } from 'rxjs/operators';
 import { Experience, Mode } from 'src/app/interfaces/interfaces';
 import { PortfolioService } from 'src/app/services/portfolio.service';
+import { baseUrl } from 'src/app/shared/ruta';
 
 @Component({
   selector: 'app-addexperience',
@@ -29,6 +30,8 @@ export class AddexperienceComponent implements OnInit {
   startDateF: Date = new Date();
 
   modalidades: Mode[] = [];
+
+  urlserver: string = baseUrl;
 
   msgs: Message[] = [];
 

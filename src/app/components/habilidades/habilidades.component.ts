@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Table } from 'primeng/table';
 import { Skills } from 'src/app/interfaces/interfaces';
 import { PortfolioService } from 'src/app/services/portfolio.service';
+import { baseUrl } from 'src/app/shared/ruta';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class HabilidadesComponent implements OnInit {
 
 
   habilidades: Skills[] = [];
-  
+  urlserver: string = baseUrl;
   valor: number = 3;
 
   

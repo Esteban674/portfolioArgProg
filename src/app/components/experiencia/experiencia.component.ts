@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Experience } from 'src/app/interfaces/interfaces';
 import { PortfolioService } from 'src/app/services/portfolio.service';
 import { TokenService } from 'src/app/services/token.service';
+import { baseUrl } from 'src/app/shared/ruta';
 
 @Component({
   selector: 'app-experiencia',
@@ -11,6 +12,7 @@ import { TokenService } from 'src/app/services/token.service';
 export class ExperienciaComponent implements OnInit {
 
   experiences: Experience[] = [];
+  urlserver: string = baseUrl;
 
   constructor(private portfolioService: PortfolioService, private tokenService: TokenService) { }
 

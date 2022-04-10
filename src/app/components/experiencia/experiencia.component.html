@@ -16,9 +16,9 @@
         <li *ngFor="let experience of experiences; let i = index">
           <div class="grid page-border page-card" style="flex-wrap: nowrap;">
             <div class="col-auto mt-1 pl-1 pe-1">
-              <span *ngIf="experience.img"><img src="http://localhost:8080/uploads/img/{{experience.img}}" 
+              <span *ngIf="experience.img"><img src="{{urlserver}}/uploads/img/{{experience.img}}" 
                class="imagen-card" style="cursor: pointer;" [routerLink]="['/experiencia/editar', experience.id]"></span>
-               <span *ngIf="!experience.img"><img src="http://localhost:8080/images/image_add_fill_icon.png" 
+               <span *ngIf="!experience.img"><img src="{{urlserver}}/images/image_add_fill_icon.png" 
                  class="imagen-card" style="cursor: pointer;" [routerLink]="['/experiencia/editar', experience.id]"></span>
              </div>
             <div class="col-sm-8 col-lg-10 p-2">
