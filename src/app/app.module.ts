@@ -10,7 +10,6 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { HabilidadesComponent } from './components/habilidades/habilidades.component';
 import { CursosComponent } from './components/cursos/cursos.component';
-import { IniciarSesionComponent } from './shared/iniciar-sesion/iniciar-sesion.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PrimeNgModule } from './shared/prime-ng/prime-ng.module';
 import { ContactoComponent } from './components/contacto/contacto.component';
@@ -28,6 +27,7 @@ import { LoginComponent } from './auth/login.component';
 import { RegistroComponent } from './auth/registro.component';
 import { ToastrModule } from 'ngx-toastr';
 import { interceptorProvider } from './interceptors/prod-interceptor.service';
+import { FooterComponent } from './shared/footer/footer.component';
 
 
 registerLocaleData(localeEsp);
@@ -41,7 +41,6 @@ registerLocaleData(localeEsp);
     EducacionComponent,
     HabilidadesComponent,
     CursosComponent,
-    IniciarSesionComponent,
     ContactoComponent,
     MenuComponent,
     AddexperienceComponent,
@@ -50,7 +49,8 @@ registerLocaleData(localeEsp);
     AddskillComponent,
     ProyectosComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    FooterComponent
 
   ],
   imports: [

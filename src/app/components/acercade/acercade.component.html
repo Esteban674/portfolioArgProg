@@ -1,12 +1,19 @@
 
 
 <div>
-    <div class="p-card page-border p-4">
-          <h2>Portfolio</h2>
+    <div class="p-card page-border p-4 animation-card">
+      <div class="row">
+        <div class="col-10">
+          <h2><span class="animate__animated animate__shakeY animate__delay-2s saludar">Hola!</span><span class="fondo-texto">Soy ESTEBAN GABRIEL JESUS PEREA</span></h2>
+        </div>
+          <div class="col-2">
+             <img src="/assets/img/argentina.jpg" alt="logo-argentina" style="width:60px"/>
+          </div>
+      </div>
           <hr>
-          <div class="grid page-border page-card mt-3 me-3">
-            <div class="col-11">
-              <textarea rows="12" cols="120" pInputTextarea [(ngModel)]="data" [disabled]="!editing" [autoResize]="true"></textarea>
+          <div class="grid page-border page-card mt-3 me-3 fondo">
+            <div class="col-11 contenedor">
+              <textarea cols="110" pInputTextarea [(ngModel)]="data" [disabled]="!editing" [autoResize]="true" class="animation-text text comentario"></textarea>
             </div>
           <div class="col-1">
             <button *ngIf="!editing" pButton pRipple type="button" icon="pi pi-pencil" (click)="editar()" class="p-button-rounded"></button>

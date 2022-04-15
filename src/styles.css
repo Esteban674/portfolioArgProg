@@ -47,3 +47,21 @@ ul{
     margin-left: 5px;
     margin-right: 5px;
 }
+
+.animation-card{
+    animation: fadeIn;
+    animation-duration: 2s;
+}
+
+
+.fondo-texto{
+    background: url('/assets/img/banner-bandera4.png');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .fondo-textoS{
+    background: url('/assets/img/banner-bandera6.png');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

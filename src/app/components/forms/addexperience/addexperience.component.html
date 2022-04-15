@@ -1,6 +1,6 @@
 <h3>{{(experiencia.id)? ((elimina)? 'Borrar': 'Editar') : 'Agregar'}} Experiencia</h3>
 <hr>
-<form (ngSubmit)="confirm()" autocomplete="off" [formGroup]="addExperienceForm" enctype="multipart/form-data">
+<form (ngSubmit)="confirm()" autocomplete="off" [formGroup]="addExperienceForm" enctype="multipart/form-data" class="animation-card">
    <div class="p-fluid grid pt-3">
     <div class="field col-12 md:col-12">
         <span class="p-float-label p-input-icon-left">
